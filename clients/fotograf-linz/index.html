@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Lichtblick Fotografie - Emotionale Bilder in Linz</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#264653",        /* Deep Petrol */
+                        "primary-light": "#2a9d8f",  /* Teal */
+                        "accent": "#e9c46a",         /* Warm Gold */
+                        "background-light": "#ffffff",
+                        "text-main": "#264653",
+                    },
+                    fontFamily: {
+                        "display": ["Cormorant Garamond", "serif"],
+                        "sans": ["Montserrat", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "2px",
+                        "xl": "4px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-text-main antialiased overflow-x-hidden selection:bg-accent/30">
+
+    <div class="relative flex h-auto min-h-screen w-full flex-col">
+
+        <!-- Header / Navigation -->
+        <header
+            class="flex items-center bg-white/80 backdrop-blur-md sticky top-0 z-50 px-6 py-4 justify-between transition-all duration-300">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-3xl text-primary">camera</span>
+                <h2 class="text-primary text-2xl font-serif italic font-semibold tracking-wide">Lichtblick</h2>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#hero"
+                    class="text-sm uppercase tracking-widest text-primary hover:text-accent transition-colors">Start</a>
+                <a href="#portfolio"
+                    class="text-sm uppercase tracking-widest text-primary hover:text-accent transition-colors">Portfolio</a>
+                <a href="#about"
+                    class="text-sm uppercase tracking-widest text-primary hover:text-accent transition-colors">Über
+                    Mich</a>
+                <a href="#prices"
+                    class="text-sm uppercase tracking-widest text-primary hover:text-accent transition-colors">Preise</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="#contact"
+                    class="hidden lg:inline-flex items-center justify-center border border-primary px-6 py-2 text-primary font-medium text-xs uppercase tracking-widest hover:bg-primary hover:text-white transition-all">
+                    Termin anfragen
+                </a>
+            </div>
+        </header>
+
+        <main class="flex-1">
+
+            <!-- HERO SECTION -->
+            <section id="hero" class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+                <!-- Parallax Background -->
+                <div class="absolute inset-0 z-0">
+                    <img alt="Wedding Couple" class="h-full w-full object-cover"
+                        src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop" />
+                    <div class="absolute inset-0 bg-white/20 backdrop-brightness-75"></div>
+                </div>
+
+                <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                    <p
+                        class="text-white text-sm md:text-base uppercase tracking-[0.3em] mb-4 font-medium drop-shadow-md">
+                        Fotografie in Linz</p>
+                    <h1
+                        class="text-white text-5xl md:text-7xl lg:text-8xl font-serif italic mb-6 leading-tight drop-shadow-lg">
+                        Emotionale <br /> Augenblicke
+                    </h1>
+                    <p
+                        class="text-white/90 text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+                        Authentische Bilder, die Ihre Geschichte erzählen – für Paare, Persönlichkeiten und Unternehmen.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#contact"
+                            class="bg-white text-primary px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-accent hover:text-white transition-all shadow-xl">
+                            Shooting anfragen
+                        </a>
+                        <a href="#portfolio"
+                            class="border border-white text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all backdrop-blur-sm">
+                            Portfolio ansehen
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INTRO TEXT -->
+            <section class="py-24 px-6 bg-white text-center">
+                <div class="max-w-2xl mx-auto">
+                    <span class="material-symbols-outlined text-4xl text-accent mb-6">lens_blur</span>
+                    <h2 class="text-3xl md:text-4xl font-serif italic text-primary mb-6">"Fotografie ist die Kunst,
+                        <br /> den Moment für die Ewigkeit festzuhalten."
+                    </h2>
+                    <p class="text-slate-500 leading-loose font-light">
+                        Ich bin spezialisiert auf natürliche Lichtstimmungen und ungestellte Momente. Ob beim Ja-Wort,
+                        einem intimen Portrait-Shooting oder für Ihren professionellen Business-Auftritt – ich begleite
+                        Sie unaufdringlich und professionell.
+                    </p>
+                </div>
+            </section>
+
+            <!-- PORTFOLIO GRID -->
+            <section id="portfolio" class="py-12 px-2 md:px-0">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-0">
+                    <!-- Item 1 -->
+                    <div class="group relative aspect-[4/5] overflow-hidden cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1511285560982-1351cdeb9821?q=80&w=1000&auto=format&fit=crop"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            alt="Hochzeit">
+                        <div
+                            class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <h3 class="text-white text-3xl font-serif italic text-center">Hochzeiten <br /><span
+                                    class="text-xs font-sans uppercase tracking-widest not-italic mt-2 block">Love
+                                    Stories</span></h3>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="group relative aspect-[4/5] overflow-hidden cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1000&auto=format&fit=crop"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            alt="Portrait">
+                        <div
+                            class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <h3 class="text-white text-3xl font-serif italic text-center">Portraits <br /><span
+                                    class="text-xs font-sans uppercase tracking-widest not-italic mt-2 block">Pure
+                                    Personality</span></h3>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="group relative aspect-[4/5] overflow-hidden cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1000&auto=format&fit=crop"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            alt="Business">
+                        <div
+                            class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <h3 class="text-white text-3xl font-serif italic text-center">Business <br /><span
+                                    class="text-xs font-sans uppercase tracking-widest not-italic mt-2 block">Professional
+                                    Brand</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="#"
+                        class="inline-block border-b border-primary pb-1 text-sm uppercase tracking-widest hover:text-accent hover:border-accent transition-colors">Zur
+                        vollständigen Galerie</a>
+                </div>
+            </section>
+
+            <!-- OFFER / PACKAGES -->
+            <section id="prices" class="py-24 px-4 bg-slate-50">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <span
+                            class="text-accent text-xs font-bold uppercase tracking-widest block mb-2">Investition</span>
+                        <h2 class="text-4xl font-serif text-primary">Preise & Pakete</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-white p-8 md:p-12 shadow-sm hover:shadow-xl transition-all border-t-4 border-slate-200 hover:border-primary">
+                            <h3 class="font-serif italic text-2xl mb-2">Portrait Session</h3>
+                            <p class="text-slate-500 text-sm mb-6">Für Einzelpersonen & Paare</p>
+                            <div class="text-3xl font-light mb-8">ab 290€</div>
+                            <ul class="space-y-4 text-sm text-slate-600 mb-8 font-light">
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-accent">check</span> 1 Stunde
+                                    Shooting</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-accent">check</span> 15
+                                    bearbeitete Bilder</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-accent">check</span> Online
+                                    Galerie</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-accent">check</span> Private
+                                    Nutzungsrechte</li>
+                            </ul>
+                            <a href="#contact"
+                                class="block w-full py-3 text-center border border-primary text-primary text-xs uppercase tracking-widest hover:bg-primary hover:text-white transition-all">Anfragen</a>
+                        </div>
+                        <!-- Card 2 -->
+                        <div
+                            class="bg-white p-8 md:p-12 shadow-xl transform md:-translate-y-4 border-t-4 border-accent relative">
+                            <div
+                                class="absolute top-0 right-0 bg-accent text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest">
+                                Beliebt</div>
+                            <h3 class="font-serif italic text-2xl mb-2">Wedding Story</h3>
+                            <p class="text-slate-500 text-sm mb-6">Die Highlights Ihres Tages</p>
+                            <div class="text-3xl font-light mb-8">ab 1.490€</div>
+                            <ul class="space-y-4 text-sm text-slate-600 mb-8 font-light">
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-accent">check</span> 8 Stunden
+                                    Begleitung</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-accent">check</span> 400+
+                                    bearbeitete Bilder</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-accent">check</span> Preview in
+                                    48h</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-accent">check</span> Hochwertige
+                                    Holzbox</li>
+                            </ul>
+                            <a href="#contact"
+                                class="block w-full py-3 text-center bg-primary text-white text-xs uppercase tracking-widest hover:bg-primary-light transition-all">Anfragen</a>
+                        </div>
+                        <!-- Card 3 -->
+                        <div
+                            class="bg-white p-8 md:p-12 shadow-sm hover:shadow-xl transition-all border-t-4 border-slate-200 hover:border-primary">
+                            <h3 class="font-serif italic text-2xl mb-2">Business</h3>
+                            <p class="text-slate-500 text-sm mb-6">Image & Branding</p>
+                            <div class="text-3xl font-light mb-8">auf Anfrage</div>
+                            <ul class="space-y-4 text-sm text-slate-600 mb-8 font-light">
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-accent">check</span> Mitarbeiter
+                                    Portraits</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-accent">check</span> Mood-Shots &
+                                    Office</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-accent">check</span> Kommerzielle
+                                    Nutzung</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm text-accent">check</span> Schnelle
+                                    Lieferung</li>
+                            </ul>
+                            <a href="#contact"
+                                class="block w-full py-3 text-center border border-primary text-primary text-xs uppercase tracking-widest hover:bg-primary hover:text-white transition-all">Individuelles
+                                Angebot</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT SECTION -->
+            <section id="about" class="py-24 px-6 bg-white overflow-hidden">
+                <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+                    <div class="w-full md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1554048612-387768052bf6?q=80&w=1000&auto=format&fit=crop"
+                            class="w-full h-auto object-cover shadow-2xl skew-y-2 md:skew-y-0" alt="Photographer">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <span class="text-accent text-xs font-bold uppercase tracking-widest block mb-4">Über
+                            Mich</span>
+                        <h2 class="text-4xl md:text-5xl font-serif italic text-primary mb-6">Hallo, ich bin Anna</h2>
+                        <p class="text-slate-600 font-light leading-relaxed mb-6">
+                            Fotografie ist für mich mehr als nur Technik – es geht um Vertrauen und Atmosphäre. Ich
+                            möchte, dass Sie sich vor meiner Kamera wohlfühlen, denn nur so entstehen echte, ungestellte
+                            Bilder.
+                        </p>
+                        <div class="grid grid-cols-2 gap-8 mt-8">
+                            <div>
+                                <h4 class="font-bold text-primary mb-2">Stil</h4>
+                                <p class="text-sm text-slate-500 font-light">Natürlich, Zeitlos, Warm</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary mb-2">Fokus</h4>
+                                <p class="text-sm text-slate-500 font-light">Emotionen & Details</p>
+                            </div>
+                        </div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Signature_sample.svg/1200px-Signature_sample.svg.png"
+                            class="h-12 mt-10 opacity-60" alt="Unterschrift">
+                    </div>
+                </div>
+            </section>
+
+            <!-- TEAM SECTION -->
+            <section id="team" class="py-24 px-6 bg-slate-50">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <span class="text-accent text-xs font-bold uppercase tracking-widest block mb-2">Das Team</span>
+                        <h2 class="text-4xl font-serif italic text-primary">Kreative Köpfe</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                        <!-- Person 1 -->
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-64 h-80 overflow-hidden mb-6 relative group">
+                                <div
+                                    class="absolute inset-0 border-2 border-accent transform translate-x-3 translate-y-3 transition-transform group-hover:translate-x-2 group-hover:translate-y-2">
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1554048612-387768052bf6?q=80&w=800&auto=format&fit=crop"
+                                    alt="Anna Lichtblick"
+                                    class="w-full h-full object-cover relative z-10 grayscale hover:grayscale-0 transition-all duration-500">
+                            </div>
+                            <h3 class="text-2xl font-serif italic text-primary">Anna Lichtblick</h3>
+                            <p class="text-xs uppercase tracking-widest text-accent font-bold mt-1 mb-3">Lead
+                                Photographer</p>
+                            <p class="text-slate-500 font-light text-sm max-w-xs">
+                                Gründerin und kreatives Herz. Liebt das goldene Stundenlicht und echte Lacher.
+                            </p>
+                        </div>
+
+                        <!-- Person 2 -->
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-64 h-80 overflow-hidden mb-6 relative group">
+                                <div
+                                    class="absolute inset-0 border-2 border-primary/20 transform translate-x-3 translate-y-3 transition-transform group-hover:translate-x-2 group-hover:translate-y-2">
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=800&auto=format&fit=crop"
+                                    alt="Lena Weiss"
+                                    class="w-full h-full object-cover relative z-10 grayscale hover:grayscale-0 transition-all duration-500">
+                            </div>
+                            <h3 class="text-2xl font-serif italic text-primary">Lena Weiss</h3>
+                            <p class="text-xs uppercase tracking-widest text-accent font-bold mt-1 mb-3">Second Shooter
+                                & Edit</p>
+                            <p class="text-slate-500 font-light text-sm max-w-xs">
+                                Fängt die Momente dazwischen ein und sorgt für den perfekten Look in der
+                                Nachbearbeitung.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TESTIMONIALS -->
+            <section class="py-20 px-4 bg-background-light border-t border-slate-100">
+                <div class="max-w-4xl mx-auto text-center">
+                    <span class="material-symbols-outlined text-accent text-4xl mb-6">format_quote</span>
+                    <h3 class="text-2xl md:text-3xl font-serif italic leading-relaxed text-primary mb-8">
+                        "Anna hat uns an unserem großen Tag so wunderbar begleitet. Die Bilder sind ein Traum und wir
+                        haben uns in jedem Moment wohl gefühlt!"
+                    </h3>
+                    <div class="flex items-center justify-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200&auto=format&fit=crop"
+                            class="w-12 h-12 rounded-full object-cover grayscale" alt="Client">
+                        <div class="text-left">
+                            <div class="font-bold text-sm uppercase tracking-wider text-primary">Julia & Thomas</div>
+                            <div class="text-xs text-slate-400">Hochzeit 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT FORM SECTION -->
+            <section id="contact" class="py-24 px-4 bg-primary text-white">
+                <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16">
+
+                    <div class="w-full lg:w-1/2">
+                        <span class="text-accent text-xs font-bold uppercase tracking-widest block mb-4">Kontakt</span>
+                        <h2 class="text-4xl md:text-5xl font-serif italic mb-6">Lassen Sie uns etwas <br /> Schönes
+                            schaffen.</h2>
+                        <p class="text-white/70 font-light leading-relaxed mb-10">
+                            Ich freue mich darauf, von Ihnen zu hören. Egal ob Hochzeit, Portrait oder Business-Anfrage
+                            – schreiben Sie mir einfach.
+                        </p>
+
+                        <div class="space-y-6 font-light">
+                            <a href="mailto:hallo@lichtblick-foto.at"
+                                class="flex items-center gap-4 hover:text-accent transition-colors">
+                                <span class="material-symbols-outlined font-light">mail</span>
+                                hallo@lichtblick-foto.at
+                            </a>
+                            <div class="flex items-center gap-4">
+                                <span class="material-symbols-outlined font-light">location_on</span>
+                                Linz & Umgebung
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-1/2 bg-white/5 backdrop-blur-lg p-8 md:p-10 border border-white/10">
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-xs uppercase tracking-widest font-bold text-accent">Name</label>
+                                    <input type="text"
+                                        class="bg-transparent border-b border-white/30 text-white placeholder-white/30 focus:border-accent focus:ring-0 px-0 py-3 transition-colors"
+                                        placeholder="Ihr Name" required />
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-xs uppercase tracking-widest font-bold text-accent">Datum</label>
+                                    <input type="text"
+                                        class="bg-transparent border-b border-white/30 text-white placeholder-white/30 focus:border-accent focus:ring-0 px-0 py-3 transition-colors"
+                                        placeholder="Wunschdatum" />
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs uppercase tracking-widest font-bold text-accent">E-Mail</label>
+                                <input type="email"
+                                    class="bg-transparent border-b border-white/30 text-white placeholder-white/30 focus:border-accent focus:ring-0 px-0 py-3 transition-colors"
+                                    placeholder="ihre@email.com" required />
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs uppercase tracking-widest font-bold text-accent">Shooting
+                                    Art</label>
+                                <select
+                                    class="bg-transparent border-b border-white/30 text-white focus:border-accent focus:ring-0 px-0 py-3 transition-colors [&>option]:text-black">
+                                    <option>Hochzeit</option>
+                                    <option>Portrait</option>
+                                    <option>Business</option>
+                                    <option>Sonstiges</option>
+                                </select>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <label class="text-xs uppercase tracking-widest font-bold text-accent">Nachricht</label>
+                                <textarea rows="4"
+                                    class="bg-transparent border-b border-white/30 text-white placeholder-white/30 focus:border-accent focus:ring-0 px-0 py-3 transition-colors resize-none"
+                                    placeholder="Erzählen Sie mir von Ihren Plänen..." required></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="bg-accent text-primary font-bold uppercase tracking-widest text-xs px-8 py-4 w-full hover:bg-white transition-colors mt-4">
+                                Nachricht Senden
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="bg-primary-darker py-8 text-center text-white/40 text-xs tracking-widest uppercase bg-[#1a3a4a]">
+            <div class="max-w-7xl mx-auto border-t border-white/10 pt-8 px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+                    <div>&copy; 2026 Lichtblick Fotografie</div>
+                    <div class="flex gap-6">
+                        <a href="#" class="hover:text-white transition-colors">Impressum</a>
+                        <a href="#" class="hover:text-white transition-colors">Datenschutz</a>
+                        <a href="#" class="hover:text-white transition-colors">Instagram</a>
+                    </div>
+                </div>
+
+                <div class="border-t border-white/5 pt-6 flex flex-col items-center gap-2">
+                    <p class="font-bold text-accent/80 tracking-wider text-[10px]">Webseiten-Demo</p>
+                    <p class="text-[10px] text-white/30 max-w-lg normal-case tracking-normal leading-relaxed">
+                        Hinweis: Diese Webseite ist ein Demo-Projekt zu Testzwecken für <strong>Landing Pages
+                            OÖ</strong>.
+                        Es handelt sich um keine reale Firma.
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

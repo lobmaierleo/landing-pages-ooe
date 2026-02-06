@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tischlerei Holzmann - Maßarbeit aus Wels</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8B5A2B",        /* Warm Wood Brown */
+                        "primary-dark": "#5D3A1A",   /* Darker Wood */
+                        "accent-green": "#2F4F4F",   /* Dark Slate Green */
+                        "background-light": "#FAF9F6", /* Off-white/Cream */
+                        "background-dark": "#1C1C1C",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "sans": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light text-slate-900 antialiased overflow-x-hidden selection:bg-primary/20">
+
+    <div class="relative flex h-auto min-h-screen w-full flex-col">
+
+        <!-- Header / Navigation -->
+        <header
+            class="flex items-center bg-white/95 backdrop-blur-md sticky top-0 z-50 px-4 py-3 justify-between border-b border-stone-200 lg:px-8 shadow-sm">
+            <div class="flex items-center gap-2">
+                <div class="text-primary flex size-10 shrink-0 items-center justify-center bg-primary/10 rounded-lg">
+                    <span class="material-symbols-outlined text-2xl">carpenter</span>
+                </div>
+                <h2 class="text-[#2C2C2C] text-base font-extrabold leading-tight tracking-tight lg:text-xl">Tischlerei
+                    Holzmann
+                </h2>
+            </div>
+
+            <!-- Desktop Nav (Hidden on mobile) -->
+            <nav class="hidden lg:flex items-center gap-6">
+                <a href="#hero"
+                    class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Start</a>
+                <a href="#services"
+                    class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Leistungen</a>
+                <a href="#about" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Über
+                    Uns</a>
+                <a href="#projects"
+                    class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Projekte</a>
+                <a href="#testimonials"
+                    class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Kundenstimmen</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="tel:+437242000000"
+                    class="flex size-10 items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all">
+                    <span class="material-symbols-outlined">call</span>
+                </a>
+                <a href="#contact"
+                    class="hidden lg:inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-white font-bold text-sm hover:bg-primary-dark transition-all shadow-md hover:shadow-lg">
+                    Beratungstermin vereinbaren
+                </a>
+            </div>
+        </header>
+
+        <main class="flex-1">
+
+            <!-- HERO SECTION -->
+            <section id="hero" class="relative">
+                <div
+                    class="relative flex min-h-[600px] lg:min-h-[700px] w-full flex-col items-start justify-center px-6 pb-16 pt-32 overflow-hidden bg-stone-900 lg:items-center lg:text-center">
+                    <!-- Hero Background Image -->
+                    <div class="absolute inset-0 z-0">
+                        <img alt="Modern carpentry workshop" class="h-full w-full object-cover opacity-50"
+                            src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?q=80&w=2832&auto=format&fit=crop" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-900/40 to-transparent">
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="relative z-10 w-full max-w-xl lg:max-w-4xl">
+                        <div
+                            class="mb-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-stone-800/80 backdrop-blur-md border border-stone-700 text-stone-300 text-xs font-bold uppercase tracking-wider lg:mx-auto shadow-lg">
+                            <span class="text-primary material-symbols-outlined text-sm">handyman</span>
+                            Meisterbetrieb seit 2002
+                        </div>
+
+                        <h1
+                            class="text-white text-4xl lg:text-6xl font-black leading-tight tracking-tight mb-6 drop-shadow-lg">
+                            Ihre Tischlerei in Wels – <br class="hidden lg:block" /> <span
+                                class="text-primary text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-800"
+                                style="-webkit-text-stroke: 1px rgba(255,255,255,0.1);">Maßarbeit aus Holz</span>
+                        </h1>
+                        <h2
+                            class="text-stone-300 text-lg lg:text-xl font-medium leading-relaxed mb-10 flex flex-col lg:flex-row items-start lg:items-center gap-2 lg:justify-center">
+                            Individuelle Möbel und Innenausbau für Ihr Zuhause.
+                        </h2>
+
+                        <div class="flex flex-col gap-4 lg:flex-row lg:justify-center lg:w-full">
+                            <a href="#contact"
+                                class="flex w-full lg:w-auto cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-primary hover:bg-primary-dark text-white text-lg font-bold transition-all shadow-xl hover:scale-[1.02]">
+                                <span class="truncate">Beratungstermin vereinbaren</span>
+                                <span class="material-symbols-outlined ml-2">calendar_month</span>
+                            </a>
+                            <a href="#projects"
+                                class="flex w-full lg:w-auto cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white text-lg font-semibold transition-all">
+                                Referenzen ansehen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TRUST BAR -->
+            <section
+                class="bg-white py-12 px-4 border-b border-stone-200 relative z-20 -mt-8 mx-4 rounded-xl shadow-xl lg:mx-auto lg:max-w-6xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary/10 p-3 rounded-lg text-primary">
+                            <span class="material-symbols-outlined text-3xl">verified</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900">20+ Jahre Erfahrung</h4>
+                            <p class="text-sm text-stone-500 mt-1">Meisterbetrieb mit Tradition</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary/10 p-3 rounded-lg text-primary">
+                            <span class="material-symbols-outlined text-3xl">home_pin</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900">Regionale Fertigung</h4>
+                            <p class="text-sm text-stone-500 mt-1">Direkt aus Wels</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary/10 p-3 rounded-lg text-primary">
+                            <span class="material-symbols-outlined text-3xl">design_services</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900">Persönliche Planung</h4>
+                            <p class="text-sm text-stone-500 mt-1">Maßgeschneidert vor Ort</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="bg-primary/10 p-3 rounded-lg text-primary">
+                            <span class="material-symbols-outlined text-3xl">clean_hands</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900">Saubere Arbeit</h4>
+                            <p class="text-sm text-stone-500 mt-1">Termintreu & verlässlich</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SERVICES SECTION -->
+            <section id="services" class="py-20 px-4 bg-stone-50">
+                <div class="max-w-7xl mx-auto">
+                    <div class="mb-12 lg:text-center">
+                        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Unser
+                            Handwerk</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Maßgefertigte Lösungen für jeden
+                            Raum</h2>
+                        <p class="text-stone-600 lg:max-w-2xl lg:mx-auto">Wir realisieren Ihre Wohnträume mit
+                            hochwertigen Hölzern und moderner Technik.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Service 1 -->
+                        <div
+                            class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all border border-stone-100 hover:border-primary/30">
+                            <div class="h-48 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=1000&auto=format&fit=crop"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    alt="Einbauschränke">
+                            </div>
+                            <h3 class="text-xl font-bold text-stone-900 mb-2">Einbauschränke & Garderoben</h3>
+                            <p class="text-stone-600 text-sm mb-4">Perfekter Stauraum auch in schwierigen Nischen und
+                                unter Dachschrägen.</p>
+                            <a href="#contact"
+                                class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Anfragen
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                        </div>
+                        <!-- Service 2 -->
+                        <div
+                            class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all border border-stone-100 hover:border-primary/30">
+                            <div class="h-48 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="https://images.unsplash.com/photo-1556911220-db7969116c4e?q=80&w=1000&auto=format&fit=crop"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    alt="Küchen">
+                            </div>
+                            <h3 class="text-xl font-bold text-stone-900 mb-2">Küchen nach Maß</h3>
+                            <p class="text-stone-600 text-sm mb-4">Traumküchen, die Optik und Funktionalität perfekt
+                                vereinen.</p>
+                            <a href="#contact"
+                                class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Anfragen
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                        </div>
+                        <!-- Service 3 -->
+                        <div
+                            class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all border border-stone-100 hover:border-primary/30">
+                            <div class="h-48 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1000&auto=format&fit=crop"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    alt="Türen & Böden">
+                            </div>
+                            <h3 class="text-xl font-bold text-stone-900 mb-2">Türen & Böden</h3>
+                            <p class="text-stone-600 text-sm mb-4">Hochwertige Parkettböden und Innentüren für ein
+                                warmes Wohngefühl.</p>
+                            <a href="#contact"
+                                class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Anfragen
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                        </div>
+                        <!-- Service 4 -->
+                        <div
+                            class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all border border-stone-100 hover:border-primary/30">
+                            <div class="h-48 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1000&auto=format&fit=crop"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    alt="Büro">
+                            </div>
+                            <h3 class="text-xl font-bold text-stone-900 mb-2">Büro & Praxis</h3>
+                            <p class="text-stone-600 text-sm mb-4">Repräsentative und ergonomische Einrichtungen für
+                                Ihren Arbeitsplatz.</p>
+                            <a href="#contact"
+                                class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Anfragen
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECT GALLERY -->
+            <section id="projects" class="py-20 px-4 bg-white">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                        <div>
+                            <span
+                                class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Galerie</span>
+                            <h2 class="text-3xl md:text-4xl font-bold text-stone-900">Ausgewählte Projekte</h2>
+                        </div>
+                        <a href="#contact"
+                            class="inline-flex items-center gap-2 font-semibold text-stone-600 hover:text-primary transition-colors">Alle
+                            Projekte ansehen <span class="material-symbols-outlined">arrow_forward</span></a>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Project 1 -->
+                        <div class="group relative overflow-hidden rounded-xl cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-stone-900/40 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
+                                <span
+                                    class="bg-white text-stone-900 px-4 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform">Details
+                                    ansehen</span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1000&auto=format&fit=crop"
+                                class="w-full aspect-[4/3] object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Küche Wels">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-stone-900/90 to-transparent z-10">
+                                <h3 class="text-white text-xl font-bold">Moderne Eichenküche</h3>
+                                <p class="text-stone-300 text-sm">Neubau in Wels</p>
+                            </div>
+                        </div>
+                        <!-- Project 2 -->
+                        <div class="group relative overflow-hidden rounded-xl cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-stone-900/40 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
+                                <span
+                                    class="bg-white text-stone-900 px-4 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform">Details
+                                    ansehen</span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1595515106967-0fef352d8da0?q=80&w=1000&auto=format&fit=crop"
+                                class="w-full aspect-[4/3] object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Schrankraum">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-stone-900/90 to-transparent z-10">
+                                <h3 class="text-white text-xl font-bold">Begehbarer Schrankraum</h3>
+                                <p class="text-stone-300 text-sm">Sanierung in Thalheim</p>
+                            </div>
+                        </div>
+                        <!-- Project 3 -->
+                        <div class="group relative overflow-hidden rounded-xl cursor-pointer">
+                            <div
+                                class="absolute inset-0 bg-stone-900/40 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
+                                <span
+                                    class="bg-white text-stone-900 px-4 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform">Details
+                                    ansehen</span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000&auto=format&fit=crop"
+                                class="w-full aspect-[4/3] object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Wohnwand">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-stone-900/90 to-transparent z-10">
+                                <h3 class="text-white text-xl font-bold">Massive Wohnwand</h3>
+                                <p class="text-stone-300 text-sm">Maßanfertigung Marchtrenk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT SECTION -->
+            <section id="about" class="bg-stone-100 py-20 px-4">
+                <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+                    <div class="w-full lg:w-1/2 relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
+                        <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-accent-green/20 rounded-full blur-2xl">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1579042918882-628d68961730?q=80&w=1000&auto=format&fit=crop"
+                            alt="Der Tischlermeister"
+                            class="w-full h-auto rounded-xl shadow-2xl relative z-10 rotate-1 hover:rotate-0 transition-all duration-500">
+                    </div>
+
+                    <div class="w-full lg:w-1/2">
+                        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Über Uns</span>
+                        <h2 class="text-STONE-900 text-3xl lg:text-4xl font-extrabold leading-tight pb-6">
+                            Leidenschaft für Holz seit Generationen
+                        </h2>
+                        <p class="text-stone-700 text-lg leading-relaxed mb-6">
+                            Als Tischlerei Holzmann stehen wir nicht nur für traditionelles Handwerk, sondern auch für
+                            nachhaltige Materialien und langlebige Qualität.
+                        </p>
+                        <p class="text-stone-600 mb-8">
+                            In unserer Werkstatt in Wels kombinieren wir bewährte Techniken mit modernster
+                            CNC-Technologie, um Ihre Wohnträume präzise und effizient umzusetzen. Uns ist wichtig, dass
+                            Sie lange Freude an Ihren Möbeln haben.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="border-l-4 border-primary pl-4">
+                                <h4 class="font-bold text-stone-900 text-lg">Nachhaltigkeit</h4>
+                                <p class="text-sm text-stone-500 mt-1">Hölzer aus heimischen Wäldern</p>
+                            </div>
+                            <div class="border-l-4 border-accent-green pl-4">
+                                <h4 class="font-bold text-stone-900 text-lg">Termintreue</h4>
+                                <p class="text-sm text-stone-500 mt-1">Verlässliche Planung & Montage</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- TEAM SECTION -->
+                <section id="team" class="py-20 px-4 bg-white">
+                    <div class="max-w-7xl mx-auto text-center mb-16">
+                        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Unser
+                            Team</span>
+                        <h2 class="text-3xl font-bold text-stone-900">Menschen hinter dem Handwerk</h2>
+                        <p class="text-stone-600 mt-4 max-w-2xl mx-auto">
+                            Mit Herzblut und Fachwissen setzen wir Ihre Wünsche um.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                        <!-- Team Member 1 -->
+                        <div class="group text-center">
+                            <div
+                                class="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-lg border-4 border-white outline outline-1 outline-stone-200">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    alt="Johann Holzmann">
+                            </div>
+                            <h3 class="text-xl font-bold text-stone-900">Johann Holzmann</h3>
+                            <p class="text-primary font-medium text-sm">Tischlermeister & Inhaber</p>
+                            <p class="text-stone-500 text-sm mt-2">Seit 30 Jahren mit Leidenschaft dabei. Spezialist für
+                                Restaurierungen.</p>
+                        </div>
+
+                        <!-- Team Member 2 -->
+                        <div class="group text-center">
+                            <div
+                                class="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-lg border-4 border-white outline outline-1 outline-stone-200">
+                                <img src="https://images.unsplash.com/photo-1540569014015-19a7be504e3a?q=80&w=800&auto=format&fit=crop"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    alt="Thomas Huber">
+                            </div>
+                            <h3 class="text-xl font-bold text-stone-900">Thomas Huber</h3>
+                            <p class="text-primary font-medium text-sm">Tischlergeselle</p>
+                            <p class="text-stone-500 text-sm mt-2">Experte für modernen Möbelbau und CNC-Bearbeitung.
+                            </p>
+                        </div>
+
+                        <!-- Team Member 3 -->
+                        <div class="group text-center">
+                            <div
+                                class="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-lg border-4 border-white outline outline-1 outline-stone-200">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    alt="Lisa Berger">
+                            </div>
+                            <h3 class="text-xl font-bold text-stone-900">Lisa Berger</h3>
+                            <p class="text-primary font-medium text-sm">Innenarchitektur</p>
+                            <p class="text-stone-500 text-sm mt-2">Plant Ihre Räume mit dem Blick für das besondere
+                                Detail.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FOOTER -->
+                <footer class="bg-stone-900 text-stone-400 py-12 px-6 border-t border-stone-800">
+                    <div class="max-w-7xl mx-auto">
+                        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                            <div>
+                                <h3 class="text-white text-xl font-bold flex items-center gap-2">
+                                    <span class="material-symbols-outlined">carpenter</span>
+                                    Tischlerei Holzmann
+                                </h3>
+                                <p class="text-sm mt-2">Maßarbeit aus Wels seit 2002.</p>
+                                <div class="mt-4 p-3 bg-stone-800/50 rounded-lg border border-stone-700 max-w-xs">
+                                    <p
+                                        class="text-[10px] text-stone-500 uppercase font-bold tracking-wider mb-1 text-center">
+                                        Webseiten-Demo</p>
+                                    <p class="text-xs text-stone-400 text-center leading-relaxed">
+                                        Hinweis: Diese Webseite ist ein Demo-Projekt zu Testzwecken für <strong>Landing
+                                            Pages OÖ</strong>.
+                                        Es handelt sich um keine reale Firma.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 text-sm font-medium">
+                                <a href="#" class="hover:text-white transition-colors">Impressum</a>
+                                <a href="#" class="hover:text-white transition-colors">Datenschutz</a>
+                                <a href="#" class="hover:text-white transition-colors">AGB</a>
+                            </div>
+                            <div class="text-sm">
+                                © 2026 Tischlerei Holzmann
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

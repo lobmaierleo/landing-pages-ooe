@@ -1,0 +1,23 @@
+/* Global Styles */
+body {
+    font-family: 'Public Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Material Symbols Adjustments */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-outlined.fill-1 {
+    font-variation-settings: 'FILL' 1;
+}
+
+/* Custom Scrollbar for horizontal scrolling (Testimonials) */
+.snap-x {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.snap-x::-webkit-scrollbar {
+    display: none;
+}

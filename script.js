@@ -1,38 +1,60 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Navigation Toggle
+
+    // 1. Scroll Animations (Intersection Observer)
+    const observerOptions = {
+        threshold: 0.1, // Trigger when 10% of the element is visible
+        rootMargin: '0px 0px -50px 0px' // Offset a bit so it triggers before bottom
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, observerOptions);
+
+    // Target elements with .fade-in-up class
+    document.querySelectorAll('.fade-in-up').forEach(el => {
+        observer.observe(el);
+    });
+
+
+    // 2. Mobile Navigation Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
+    const navContainer = document.querySelector('.navbar');
 
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', () => {
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+
             navLinks.classList.toggle('active');
-            
-            // Hamburger animation
-            const bars = mobileMenuBtn.querySelectorAll('.bar');
-            if (navLinks.classList.contains('active')) {
-                bars[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
-                bars[1].style.opacity = '0';
-                bars[2].style.transform = 'rotate(45deg) translate(-5px, -6px)';
-            } else {
-                bars[0].style.transform = 'none';
-                bars[1].style.opacity = '1';
-                bars[2].style.transform = 'none';
-            }
+            mobileMenuBtn.classList.toggle('active');
         });
     }
 
-    // Smooth scroll for anchor links
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navContainer.contains(e.target) && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // 3. Smooth scroll for anchor links & Active link highlighting
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             // Close mobile menu if open
             if (navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
-                 const bars = mobileMenuBtn.querySelectorAll('.bar');
-                 bars[0].style.transform = 'none';
-                 bars[1].style.opacity = '1';
-                 bars[2].style.transform = 'none';
+                mobileMenuBtn.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
             }
 
             const targetId = this.getAttribute('href');
@@ -40,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                const headerOffset = 70;
+                const headerOffset = 80; // Adjusted for new navbar height
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -52,39 +74,60 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Contact Form Handling (Supabase ready structure)
+
+    // 4. Contact Form Handling
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const submitBtn = contactForm.querySelector('.btn-submit');
-            const originalBtnText = submitBtn.innerText;
-            
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+
             // Retrieve form data
             const formData = new FormData(contactForm);
             const data = Object.fromEntries(formData);
-            
+
             // UI Feedback: Loading
-            submitBtn.innerText = 'Senden...';
+            submitBtn.innerHTML = 'Wird gesendet...';
             submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
 
             try {
-                // Simulate success (Replace this with actual Supabase/Backend call)
-                console.log('Form submission data:', data);
-                
-                await new Promise(resolve => setTimeout(resolve, 1000)); // Fake delay
+                // Determine if we are developing locally or in production
+                const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 
-                // UI Feedback: Success
-                alert('Danke für Ihre Nachricht! Ich werde mich bald melden.');
+                if (isLocalhost) {
+                    console.log('Form submission data (Localhost):', data);
+                    await new Promise(resolve => setTimeout(resolve, 1500)); // Fake delay
+                    alert('Danke für Ihre Nachricht! (Demo-Modus)');
+                } else {
+                    // TODO: Connect to backend logic here
+                    console.log('Form submission data:', data);
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+                    alert('Danke für Ihre Nachricht! Ich werde mich bald melden.');
+                }
+
                 contactForm.reset();
             } catch (error) {
                 console.error('Error submitting form:', error);
                 alert('Es gab einen Fehler beim Senden. Bitte versuchen Sie es später erneut.');
             } finally {
                 // Restore button state
-                submitBtn.innerText = originalBtnText;
+                submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
             }
         });
     }
+
+    // 5. Navbar Scroll Effect (Glassmorphism enhancement)
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navContainer.classList.add('scrolled');
+        } else {
+            navContainer.classList.remove('scrolled');
+        }
+    });
+
 });
