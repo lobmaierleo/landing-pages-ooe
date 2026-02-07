@@ -6,6 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Professionelle Landing Pages für Handwerker & Dienstleister in Oberösterreich. IT-Spezialist aus Wels erstellt Ihre Webseite.">
+    <meta name="keywords"
+        content="Webdesign, Landing Page, Wels, Oberösterreich, Handwerker, Dienstleister, Website erstellen">
+    <meta name="author" content="Leo Lobmaier">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://landingpagesooe.app">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://landingpagesooe.app">
+    <meta property="og:title" content="Landing Pages OÖ | Premium Webdesign aus Wels">
+    <meta property="og:description"
+        content="Maßgeschneiderte Landing Pages für Handwerker & Dienstleister. Modernes Design, technische Perfektion.">
+    <meta property="og:image" content="https://landingpagesooe.app/assets/og-image.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Landing Pages OÖ | Premium Webdesign aus Wels">
+    <meta name="twitter:description" content="Maßgeschneiderte Landing Pages für Handwerker & Dienstleister.">
+    <meta name="twitter:image" content="https://landingpagesooe.app/assets/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <meta name="theme-color" content="#020617">
+
     <title>Landing Pages OÖ | Premium Webdesign</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +40,38 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="style.css">
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Landing Pages OÖ",
+        "description": "Premium Webdesign für Handwerker und Dienstleister in Oberösterreich",
+        "url": "https://landingpagesooe.app",
+        "email": "kontakt@landingpagesooe.app",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Wels",
+            "addressRegion": "Oberösterreich",
+            "addressCountry": "AT"
+        },
+        "priceRange": "€€",
+        "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 48.1575,
+                "longitude": 14.0239
+            },
+            "geoRadius": "100000"
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "Leo Lobmaier"
+        }
+    }
+    </script>
 </head>
 
 <body>
@@ -403,6 +460,25 @@
             <p>&copy; 2026 Landing Pages OÖ. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie-Hinweis">
+        <div class="cookie-content">
+            <span class="material-symbols-outlined cookie-icon">cookie</span>
+            <p>Diese Website verwendet Cookies für Analyse und eine bessere Nutzererfahrung.
+                <a href="datenschutz.html">Mehr erfahren</a>
+            </p>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="btn-cookie-accept">Akzeptieren</button>
+                <button id="cookie-decline" class="btn-cookie-decline">Nur Essenzielle</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Nach oben scrollen">
+        <span class="material-symbols-outlined">keyboard_arrow_up</span>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="script.js"></script>

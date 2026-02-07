@@ -166,4 +166,103 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // =====================================================
+    // NEW FEATURES
+    // =====================================================
+
+    // 6. Cookie Banner
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieAccept = document.getElementById('cookie-accept');
+    const cookieDecline = document.getElementById('cookie-decline');
+
+    // Check if user has already made a choice
+    if (!localStorage.getItem('cookie-consent')) {
+        // Show banner after a short delay for better UX
+        setTimeout(() => {
+            cookieBanner.classList.add('visible');
+        }, 1500);
+    }
+
+    if (cookieAccept) {
+        cookieAccept.addEventListener('click', () => {
+            localStorage.setItem('cookie-consent', 'accepted');
+            cookieBanner.classList.remove('visible');
+            // Enable analytics if needed
+            console.log('Cookies accepted');
+        });
+    }
+
+    if (cookieDecline) {
+        cookieDecline.addEventListener('click', () => {
+            localStorage.setItem('cookie-consent', 'essential');
+            cookieBanner.classList.remove('visible');
+            console.log('Only essential cookies');
+        });
+    }
+
+    // 7. Back to Top Button
+    const backToTopBtn = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // 8. Parallax Effect for Hero
+    const hero = document.querySelector('.hero');
+
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const heroHeight = hero ? hero.offsetHeight : 0;
+
+        if (scrolled < heroHeight && hero) {
+            const parallaxValue = scrolled * 0.3;
+            hero.style.setProperty('--parallax-y', `${parallaxValue}px`);
+        }
+    });
+
+    // 9. Image Lazy Loading Enhancement
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+
+    lazyImages.forEach(img => {
+        // Add skeleton class while loading
+        img.parentElement.classList.add('skeleton-loader');
+
+        img.addEventListener('load', () => {
+            img.parentElement.classList.remove('skeleton-loader');
+            img.style.opacity = '1';
+        });
+
+        // If already loaded (cached)
+        if (img.complete) {
+            img.parentElement.classList.remove('skeleton-loader');
+            img.style.opacity = '1';
+        }
+    });
+
+    // 10. Form Validation Feedback
+    const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
+
+    formInputs.forEach(input => {
+        // Real-time validation feedback
+        input.addEventListener('blur', () => {
+            if (input.value.trim() !== '' && !input.validity.valid) {
+                input.classList.add('shake');
+                setTimeout(() => input.classList.remove('shake'), 500);
+            }
+        });
+    });
+
 });
