@@ -100,18 +100,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (isLocalhost) {
                     console.log('Form submission data (Localhost):', data);
                     await new Promise(resolve => setTimeout(resolve, 1500)); // Fake delay
-                    alert('Danke für Ihre Nachricht! (Demo-Modus)');
+                    showNotification('Danke für Ihre Nachricht! (Demo-Modus)', 'success');
                 } else {
-                    // TODO: Connect to backend logic here
-                    console.log('Form submission data:', data);
-                    await new Promise(resolve => setTimeout(resolve, 1000));
-                    alert('Danke für Ihre Nachricht! Ich werde mich bald melden.');
+                    // Submit to Supabase via API
+                    const response = await fetch('/api/submit-lead', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            name: data.name,
+                            email: data.email,
+                            message: data.message,
+                            phone: data.phone || null,
+                            client: 'landing-pages-ooe'
+                        })
+                    });
+
+                    const result = await response.json();
+
+                    if (!response.ok) {
+                        throw new Error(result.error || 'Fehler beim Senden');
+                    }
+
+                    showNotification('Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Ich melde mich innerhalb von 24h.', 'success');
                 }
 
                 contactForm.reset();
             } catch (error) {
                 console.error('Error submitting form:', error);
-                alert('Es gab einen Fehler beim Senden. Bitte versuchen Sie es später erneut.');
+                showNotification('Es gab einen Fehler beim Senden. Bitte versuchen Sie es später erneut.', 'error');
             } finally {
                 // Restore button state
                 submitBtn.innerHTML = originalBtnText;
@@ -119,6 +135,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
             }
         });
+    }
+
+    // Notification Helper
+    function showNotification(message, type) {
+        // Remove existing notifications
+        const existing = document.querySelector('.form-notification');
+        if (existing) existing.remove();
+
+        const notification = document.createElement('div');
+        notification.className = `form-notification ${type}`;
+        notification.innerHTML = `
+            <span>${message}</span>
+            <button onclick="this.parentElement.remove()">×</button>
+        `;
+
+        const form = document.getElementById('contact-form');
+        form.parentElement.insertBefore(notification, form.nextSibling);
+
+        // Auto-remove after 5 seconds
+        setTimeout(() => notification.remove(), 5000);
     }
 
     // 5. Navbar Scroll Effect (Glassmorphism enhancement)
