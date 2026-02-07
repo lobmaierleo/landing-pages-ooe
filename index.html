@@ -47,8 +47,11 @@
     <header class="hero">
         <div class="container hero-content fade-in-up">
             <div
-                class="inline-block px-4 py-1 rounded-full border border-slate-700 bg-slate-900/50 backdrop-blur text-sm text-blue-300 mb-6">
+                class="inline-block px-4 py-1 rounded-full border border-slate-700 bg-slate-900/50 backdrop-blur text-sm text-blue-300 mb-4">
                 ✨ Webdesign aus Wels, Oberösterreich
+            </div>
+            <div class="pilot-badge">
+                🚀 PILOTPHASE: Limitierte Plätze zu Einführungspreisen
             </div>
             <h1>
                 Webseiten, die Ihre<br>
@@ -70,23 +73,12 @@
         </div>
     </header>
 
-    <!-- Logo Cloud / Trust Indicators (Optional) -->
-    <div class="container text-center pb-20 fade-in-up">
-        <p class="text-sm text-slate-500 uppercase tracking-widest mb-6">Technologien & Standards</p>
-        <div class="flex flex-wrap justify-center gap-8 opacity-50 grayscale transition hover:grayscale-0">
-            <!-- Icons would go here, simple text for now -->
-            <span class="font-bold text-xl text-slate-400">HTML5</span>
-            <span class="font-bold text-xl text-slate-400">CSS3</span>
-            <span class="font-bold text-xl text-slate-400">SEO Optimized</span>
-            <span class="font-bold text-xl text-slate-400">Mobile First</span>
-        </div>
-    </div>
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="section">
         <div class="container">
             <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
-                <span class="text-accent-orange font-bold tracking-wider uppercase text-sm mb-2 block">Referenzen</span>
+
                 <h2 class="section-title">Interaktive <span class="text-gradient">Showcases</span></h2>
                 <p class="section-subtitle">
                     Klicken Sie auf die Projekte, um die Live-Demo zu starten.
@@ -205,52 +197,118 @@
         </div>
     </section>
 
+    <!-- About Me Section -->
+    <section id="ueber-mich" class="section about-section">
+        <div class="container">
+            <div class="about-grid fade-in-up">
+                <!-- Profile Image Side -->
+                <div class="about-image-wrapper">
+                    <div class="about-image-glow"></div>
+                    <div class="about-image-container">
+                        <img src="assets/profile-leo.png" alt="Leo Lobmaier - Webdesigner aus Wels" class="about-image">
+                    </div>
+                    <!-- Trust Badges under image -->
+                    <div class="about-badges">
+                        <div class="about-badge">
+                            <span class="material-symbols-outlined">verified</span>
+                            IT-Experte
+                        </div>
+                        <div class="about-badge">
+                            <span class="material-symbols-outlined">location_on</span>
+                            Wels, OÖ
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Side -->
+                <div class="about-content">
+                    <span class="about-eyebrow">Der Mensch hinter den Projekten</span>
+                    <h2 class="about-title">Hi, ich bin <span class="text-gradient">Leo</span></h2>
+                    <p class="about-intro">
+                        IT-Spezialist, passionierter Webentwickler und Ihr direkter Ansprechpartner für alles rund um
+                        Ihre digitale Präsenz.
+                    </p>
+                    <p class="about-text">
+                        Ich glaube daran, dass Handwerker und Dienstleister die besten Webseiten verdienen –
+                        nicht nur die großen Konzerne. Deshalb verbinde ich technisches Know-how mit echtem
+                        Interesse an Ihrem Erfolg. Bei mir gibt es keine anonymen Support-Tickets: Sie erreichen
+                        mich persönlich und direkt.
+                    </p>
+
+                    <!-- Stats Grid -->
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Kundenzufriedenheit</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number">&lt;24h</span>
+                            <span class="stat-label">Antwortzeit</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number">OÖ</span>
+                            <span class="stat-label">Regional & Persönlich</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <a href="#kontakt" class="btn-primary inline-flex mt-6">
+                        Lernen Sie mich kennen
+                        <span class="material-symbols-outlined text-sm">waving_hand</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing Section -->
     <section id="preise" class="section">
         <div class="container">
-            <h2 class="section-title fade-in-up">Transparente <span class="text-gradient">Investition</span></h2>
-            <p class="section-subtitle fade-in-up">Keine versteckten Abo-Fallen. Einmalzahlung für Ihren Erfolg.</p>
+            <div class="text-center max-w-3xl mx-auto mb-12 fade-in-up">
+                <h2 class="section-title">Ihr <span class="text-gradient">individuelles Angebot</span></h2>
+                <p class="section-subtitle mb-0">Keine versteckten Abo-Fallen. Einmalzahlung für Ihren Erfolg.</p>
+            </div>
 
-            <div class="pricing-grid fade-in-up">
-                <div class="pricing-card">
-                    <h3 class="text-xl font-bold text-slate-300">Starter</h3>
-                    <div class="price">€299</div>
-                    <p class="text-sm text-slate-400 mb-6">Der solide Einstieg</p>
-                    <ul class="pricing-features">
-                        <li>One-Pager (Startseite)</li>
-                        <li>Mobile Optimierung</li>
-                        <li>Kontaktformular</li>
-                        <li>Impressum & Datenschutz</li>
-                    </ul>
-                    <a href="#kontakt" class="btn-secondary w-full justify-center">Auswählen</a>
+            <!-- Individual Pricing Card -->
+            <div class="pricing-individual fade-in-up">
+                <div class="pricing-individual-icon">💡</div>
+                <h3>Jedes Projekt ist einzigartig</h3>
+                <p>
+                    Basierend auf Ihren Anforderungen erhalten Sie ein maßgeschneidertes Angebot –
+                    transparent, fair und ohne versteckte Kosten.
+                </p>
+                <div class="price-reference">
+                    <span class="from">Richtwert:</span>
+                    <span class="amount">ab 300€</span>
+                    <span class="suffix">für professionelle Landing Pages</span>
                 </div>
+                <a href="#kontakt" class="btn-primary">
+                    Kostenloses Erstgespräch vereinbaren
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
 
-                <div class="pricing-card popular">
-                    <h3 class="text-xl font-bold text-white">Business</h3>
-                    <div class="price text-gradient">€599</div>
-                    <p class="text-sm text-slate-300 mb-6">Der Kunden-Liebling</p>
-                    <ul class="pricing-features">
-                        <li>Bis zu 5 Unterseiten</li>
-                        <li>SEO-Grundoptimierung</li>
-                        <li>Google Maps Integration</li>
-                        <li>Performance-Optimierung</li>
-                        <li>WhatsApp-Button</li>
-                    </ul>
-                    <a href="#kontakt" class="btn-primary w-full justify-center">Jetzt Starten</a>
-                </div>
-
-                <div class="pricing-card">
-                    <h3 class="text-xl font-bold text-slate-300">Premium</h3>
-                    <div class="price">€899</div>
-                    <p class="text-sm text-slate-400 mb-6">Das Sorglos-Paket</p>
-                    <ul class="pricing-features">
-                        <li>Individuelles Premium Design</li>
-                        <li>CMS (Inhalte selbst ändern)</li>
-                        <li>Erweiterte SEO-Strategie</li>
-                        <li>Logo-Design Basic</li>
-                        <li>Support für 3 Monate</li>
-                    </ul>
-                    <a href="#kontakt" class="btn-secondary w-full justify-center">Anfragen</a>
+            <!-- Pilot Bonus Card -->
+            <div class="pilot-bonus-card fade-in-up">
+                <h4>✨ PILOTPHASE-BONUS</h4>
+                <p>
+                    Als einer der ersten Kunden profitieren Sie von exklusiven Einführungskonditionen.
+                    In dieser Phase werden Projekte mit besonderer Sorgfalt und zusätzlichem Engagement umgesetzt –
+                    der ideale Zeitpunkt für den Start Ihrer neuen Webpräsenz.
+                </p>
+                <div class="pilot-benefits">
+                    <span class="pilot-benefit">
+                        <span class="material-symbols-outlined" style="font-size: 1rem;">savings</span>
+                        Exklusive Einführungspreise
+                    </span>
+                    <span class="pilot-benefit">
+                        <span class="material-symbols-outlined" style="font-size: 1rem;">support_agent</span>
+                        Individuelle Betreuung
+                    </span>
+                    <span class="pilot-benefit">
+                        <span class="material-symbols-outlined" style="font-size: 1rem;">verified</span>
+                        Premium Support
+                    </span>
                 </div>
             </div>
         </div>
@@ -258,30 +316,56 @@
 
     <!-- Contact Section -->
     <section id="kontakt" class="section">
-        <div class="container contact-container fade-in-up">
-            <div class="text-center mb-10">
-                <h2 class="section-title">Projekt <span class="text-gradient">starten</span></h2>
-                <p class="section-subtitle mb-0">Schreiben Sie mir unverbindlich. Ich antworte innerhalb von 24h.</p>
+        <div class="container fade-in-up">
+            <div class="text-center mb-12">
+                <h2 class="section-title">Kostenloses <span class="text-gradient">Erstgespräch</span></h2>
+                <p class="section-subtitle mb-0">
+                    Nach Ihrer Anfrage erhalten Sie einen Terminvorschlag für ein unverbindliches Beratungsgespräch.
+                </p>
             </div>
 
-            <form id="contact-form" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name / Firma</label>
-                    <input type="text" id="name" name="name" required placeholder="Ihr Name">
+            <div class="contact-unified">
+                <!-- Main Contact Card -->
+                <div class="contact-main-card">
+                    <!-- Video Call Info Banner -->
+                    <div class="video-info-banner">
+                        <div class="video-info-content">
+                            <span class="material-symbols-outlined">videocam</span>
+                            <div>
+                                <strong>Persönliches Video-Gespräch</strong>
+                                <span>15-20 Min. via Google Meet, Zoom oder Teams</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name / Unternehmen</label>
+                                <input type="text" id="name" name="name" required placeholder="Max Mustermann GmbH">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-Mail Adresse</label>
+                                <input type="email" id="email" name="email" required
+                                    placeholder="kontakt@unternehmen.at">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Projektbeschreibung</label>
+                            <textarea id="message" name="message" rows="4" required
+                                placeholder="Beschreiben Sie kurz Ihr Projekt und Ihre Ziele..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full justify-center">
+                            Anfragen
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </button>
+                        <p class="form-note">
+                            <span class="material-symbols-outlined">schedule</span>
+                            Antwort innerhalb von 24 Stunden
+                        </p>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="email">E-Mail Adresse</label>
-                    <input type="email" id="email" name="email" required placeholder="name@firma.at">
-                </div>
-                <div class="form-group">
-                    <label for="message">Nachricht</label>
-                    <textarea id="message" name="message" rows="4" required
-                        placeholder="Erzählen Sie mir von Ihrem Vorhaben..."></textarea>
-                </div>
-                <button type="submit" class="btn-primary w-full justify-center text-lg py-4">
-                    Kostenloses Angebot anfordern
-                </button>
-            </form>
+            </div>
         </div>
     </section>
 
@@ -298,7 +382,7 @@
             <div class="footer-col">
                 <h4 class="mb-4">Navigation</h4>
                 <ul class="text-slate-400 text-sm space-y-2">
-                    <li><a href="#projekte">Referenzen</a></li>
+                    <li><a href="#portfolio">Referenzen</a></li>
                     <li><a href="#preise">Angebot</a></li>
                     <li><a href="#kontakt">Kontakt</a></li>
                     <li><a href="impressum.html">Impressum</a></li>

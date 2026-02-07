@@ -51,6 +51,11 @@ h4 {
     color: var(--text-main);
 }
 
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -74,6 +79,8 @@ img {
 .section {
     padding: 8rem 0;
     position: relative;
+    scroll-snap-align: start;
+    min-height: 100vh;
 }
 
 .text-gradient {
@@ -202,6 +209,7 @@ img {
     padding-top: 80px;
     position: relative;
     overflow: hidden;
+    scroll-snap-align: start;
 }
 
 /* Background glow effects */
@@ -682,4 +690,430 @@ img {
 .fade-in-up.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* About Section */
+.about-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Profile Image */
+.about-image-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-image-glow {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(139, 92, 246, 0.2) 50%, transparent 70%);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse-glow 3s ease-in-out infinite;
+    z-index: 0;
+}
+
+.about-image-container {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    padding: 4px;
+    background: var(--primary-gradient);
+    z-index: 1;
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--bg-dark);
+}
+
+/* Badges under image */
+.about-badges {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    z-index: 1;
+}
+
+.about-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    border: var(--glass-border);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.about-badge .material-symbols-outlined {
+    font-size: 1rem;
+    color: var(--accent-blue);
+}
+
+/* Content Side */
+.about-eyebrow {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--accent-orange);
+    margin-bottom: 0.75rem;
+}
+
+.about-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.about-intro {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.about-text {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+/* Stats Grid */
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-stat {
+    text-align: center;
+    padding: 1.25rem 0.75rem;
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    border: var(--glass-border);
+    border-radius: 16px;
+}
+
+.stat-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .about-image-wrapper {
+        order: -1;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .about-badges {
+        flex-direction: column;
+    }
+}
+
+/* Pilot Phase Badge */
+.pilot-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(239, 68, 68, 0.2) 100%);
+    border: 1px solid rgba(249, 115, 22, 0.4);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fb923c;
+    animation: pulse-glow 2s ease-in-out infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(249, 115, 22, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 35px rgba(249, 115, 22, 0.5);
+    }
+}
+
+/* Pricing Individual Card */
+.pricing-individual {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    border: var(--glass-border);
+    border-radius: 24px;
+    padding: 3rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.pricing-individual-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.pricing-individual h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.pricing-individual p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.price-reference {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+    margin-bottom: 2rem;
+}
+
+.price-reference .from {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+}
+
+.price-reference .amount {
+    font-size: 3rem;
+    font-weight: 700;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.price-reference .suffix {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+/* Pilot Bonus Card */
+.pilot-bonus-card {
+    position: relative;
+    background: rgba(15, 23, 42, 0.8);
+    border-radius: 20px;
+    padding: 2.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.pilot-bonus-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(135deg, #f97316, #ef4444, #f97316);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: gradient-rotate 4s linear infinite;
+}
+
+@keyframes gradient-rotate {
+    0% {
+        background: linear-gradient(135deg, #f97316, #ef4444, #f97316);
+    }
+
+    50% {
+        background: linear-gradient(315deg, #f97316, #ef4444, #f97316);
+    }
+
+    100% {
+        background: linear-gradient(135deg, #f97316, #ef4444, #f97316);
+    }
+}
+
+.pilot-bonus-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #fb923c;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pilot-bonus-card p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.pilot-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.pilot-benefit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(249, 115, 22, 0.1);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: #fbbf24;
+}
+
+/* Unified Contact Card */
+.contact-unified {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-main-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    border: var(--glass-border);
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+/* Video Info Banner */
+.video-info-banner {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.25rem 2rem;
+}
+
+.video-info-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.video-info-content .material-symbols-outlined {
+    font-size: 2rem;
+    color: #60a5fa;
+}
+
+.video-info-content div {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-info-content strong {
+    color: #e2e8f0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.video-info-content span {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Contact Form inside main card */
+.contact-main-card .contact-form {
+    padding: 2rem;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+/* Form Row (side by side inputs) */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Form Note */
+.form-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.form-note .material-symbols-outlined {
+    font-size: 1rem;
+}
+
+/* Improved Label Readability */
+.form-group label {
+    color: #cbd5e1;
 }
