@@ -573,6 +573,7 @@ img {
     margin-top: 5rem;
     position: relative;
     overflow: hidden;
+    scroll-snap-align: end;
 }
 
 .footer::before {
