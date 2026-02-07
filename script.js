@@ -1,5 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Initialize Supabase (same instance as client sites)
+    const supabaseUrl = 'https://jbqqpfgptlepmqqbvupz.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpicXFwZmdwdGxlcG1xcWJ2dXB6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzg3NTY5NjgsImV4cCI6MjA1NDMzMjk2OH0.zCnRxHAJFXmUpxbVBelNtNR51_WwLh8M2c_Ty52QFQE';
+
+    // Create Supabase client if supabase object exists globally
+    let supabaseClient = null;
+    if (typeof supabase !== 'undefined' && supabase.createClient) {
+        supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+    }
+
     // 1. Scroll Animations (Intersection Observer)
     const observerOptions = {
         threshold: 0.1, // Trigger when 10% of the element is visible
@@ -75,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // 4. Contact Form Handling
+    // 4. Contact Form Handling - Direct to Supabase (like client sites)
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
@@ -86,7 +96,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Retrieve form data
             const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
+            const data = {
+                client: 'landing-pages-ooe',
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone') || null,
+                message: formData.get('message')
+            };
 
             // UI Feedback: Loading
             submitBtn.innerHTML = 'Wird gesendet...';
@@ -94,37 +110,21 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
 
             try {
-                // Determine if we are developing locally or in production
-                const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-
-                if (isLocalhost) {
-                    console.log('Form submission data (Localhost):', data);
-                    await new Promise(resolve => setTimeout(resolve, 1500)); // Fake delay
-                    showNotification('Danke für Ihre Nachricht! (Demo-Modus)', 'success');
-                } else {
-                    // Submit to Supabase via API
-                    const response = await fetch('/api/submit-lead', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            name: data.name,
-                            email: data.email,
-                            message: data.message,
-                            phone: data.phone || null,
-                            client: 'landing-pages-ooe'
-                        })
-                    });
-
-                    const result = await response.json();
-
-                    if (!response.ok) {
-                        throw new Error(result.error || 'Fehler beim Senden');
-                    }
-
-                    showNotification('Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Ich melde mich innerhalb von 24h.', 'success');
+                // Check if Supabase client is available
+                if (!supabaseClient) {
+                    throw new Error('Supabase nicht verfügbar');
                 }
 
+                // Insert directly into Supabase leads table
+                const { error } = await supabaseClient
+                    .from('leads')
+                    .insert([data]);
+
+                if (error) throw error;
+
+                showNotification('Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Ich melde mich innerhalb von 24h.', 'success');
                 contactForm.reset();
+
             } catch (error) {
                 console.error('Error submitting form:', error);
                 showNotification('Es gab einen Fehler beim Senden. Bitte versuchen Sie es später erneut.', 'error');
