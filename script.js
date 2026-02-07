@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize Supabase (same instance as client sites)
-    const supabaseUrl = 'https://jbqqpfgptlepmqqbvupz.supabase.co';
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpicXFwZmdwdGxlcG1xcWJ2dXB6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzg3NTY5NjgsImV4cCI6MjA1NDMzMjk2OH0.zCnRxHAJFXmUpxbVBelNtNR51_WwLh8M2c_Ty52QFQE';
+    const supabaseUrl = 'https://apchqzlmhnwgnwpofemf.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFwY2hxemxtaG53Z253cG9mZW1mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAzNjI5OTYsImV4cCI6MjA4NTkzODk5Nn0.cV2Y9D1cEzJ1tQgS_MfxPDaEqK65KNHep95-fi33cak';
 
     // Create Supabase client if supabase object exists globally
     let supabaseClient = null;
