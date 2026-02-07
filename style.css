@@ -52,7 +52,7 @@ h4 {
 }
 
 html {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     scroll-behavior: smooth;
 }
 
@@ -251,6 +251,7 @@ img {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* Portfolio Section */
@@ -637,8 +638,8 @@ img {
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(15, 23, 42, 0.95);
-        backdrop-filter: blur(15px);
+        background: #020617;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
         flex-direction: column;
         padding: 2rem 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
