@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ordination Dr. Lobmaier & Dr. Breit – Neukirchen</title>
+    <meta name="description"
+        content="Hausarztpraxis in Neukirchen – Ordination Dr. Lobmaier & Dr. Breit. Ordinationszeiten, wichtige Telefonnummern und Hinweise für Patientinnen und Patienten." />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#006d77",
+                        "accent-orange": "#e29578",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"],
+                        "sans": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light text-slate-900 antialiased overflow-x-hidden selection:bg-primary/20">
+
+    <div class="relative flex h-auto min-h-screen w-full flex-col">
+
+        <!-- Header / Navigation -->
+        <header
+            class="flex items-center bg-white/90 backdrop-blur-md sticky top-0 z-50 px-4 py-3 justify-between border-b border-slate-200 lg:px-8">
+            <div class="flex items-center gap-2">
+                <div class="text-primary flex size-10 shrink-0 items-center justify-center bg-primary/10 rounded-lg">
+                    <span class="material-symbols-outlined text-2xl">local_hospital</span>
+                </div>
+                <h2 class="text-[#0d141b] text-base font-extrabold leading-tight tracking-tight lg:text-xl">
+                    Ordination Dr. Lobmaier & Dr. Breit
+                </h2>
+            </div>
+
+            <!-- Desktop Nav (Hidden on mobile) -->
+            <nav class="hidden lg:flex items-center gap-6">
+                <a href="#hero"
+                    class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Start</a>
+                <a href="#ordination-times"
+                    class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Ordinationszeiten</a>
+                <a href="#emergency"
+                    class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Notfallnummern</a>
+                <a href="#about" class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Über
+                    uns</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="tel:+43000000000"
+                    class="flex size-10 items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all">
+                    <span class="material-symbols-outlined">call</span>
+                </a>
+                <a href="#contact"
+                    class="hidden lg:inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-white font-bold text-sm hover:bg-teal-700 transition-all">
+                    Kontakt
+                </a>
+            </div>
+        </header>
+
+        <main class="flex-1">
+
+            <!-- HERO SECTION -->
+            <section id="hero" class="relative">
+                <div
+                    class="relative flex min-h-[520px] lg:min-h-[600px] w-full flex-col items-start justify-end px-6 pb-16 pt-32 overflow-hidden bg-slate-900 lg:items-center lg:justify-center lg:text-center">
+                    <!-- Hero Background Image -->
+                    <div class="absolute inset-0 z-0">
+                        <!-- Praxisbild - Platzhalter für echtes Bild -->
+                        <img alt="Ordination Dr. Lobmaier & Dr. Breit - Praxisgebäude"
+                            class="h-full w-full object-cover opacity-60" src="images/praxis-hero.jpg"
+                            onerror="this.src='https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2668&auto=format&fit=crop'" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent">
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="relative z-10 w-full max-w-xl lg:max-w-4xl">
+                        <div
+                            class="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-primary-light text-xs font-bold uppercase tracking-wider text-white lg:mx-auto">
+                            <span class="relative flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                            </span>
+                            Hausarztpraxis Neukirchen
+                        </div>
+
+                        <h1 class="text-white text-4xl lg:text-6xl font-black leading-tight tracking-tight mb-3">
+                            Ordination <span class="text-primary">Dr. Lobmaier</span> & <span class="text-primary">Dr.
+                                Breit</span>
+                        </h1>
+                        <p class="text-slate-200 text-lg lg:text-xl font-medium leading-relaxed mb-2">
+                            Ihre Hausärzte in Neukirchen – persönlich, kompetent, für Sie da.
+                        </p>
+                        <p class="text-slate-300 text-base lg:text-lg font-normal leading-relaxed mb-8">
+                            Telefonische Terminvereinbarungen ersparen Ihnen unnötige Wartezeiten!
+                        </p>
+
+                        <div class="flex flex-col gap-4 lg:flex-row lg:justify-center lg:w-full">
+                            <a href="tel:+43000000000"
+                                class="flex w-full lg:w-auto cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-accent-orange hover:bg-orange-400 text-white text-lg font-bold transition-all shadow-lg shadow-orange-900/20 active:scale-95">
+                                <span class="material-symbols-outlined mr-2">call</span>
+                                <span class="truncate">Termin telefonisch vereinbaren</span>
+                            </a>
+                            <p class="text-slate-400 text-xs text-center font-medium lg:hidden">Rufen Sie uns an für
+                                einen Termin</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NOTICE / SCHLIESSZEITEN -->
+            <section class="bg-amber-50 border-b-2 border-amber-200">
+                <div class="max-w-7xl mx-auto py-4 px-4">
+                    <div class="flex items-center gap-3 justify-center text-amber-800" role="alert">
+                        <span class="material-symbols-outlined text-2xl text-amber-600">warning</span>
+                        <p class="text-sm lg:text-base font-semibold">
+                            <strong>Hinweis:</strong> Unsere Ordination ist vom 27.11. bis 31.11. geschlossen!
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TRUST BAR -->
+            <section class="bg-white py-8 px-4 border-b border-slate-200">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Feature 1 -->
+                    <div class="flex items-center gap-4 p-4 rounded-xl border border-slate-100 bg-slate-50">
+                        <div
+                            class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                            <span class="material-symbols-outlined text-2xl">stethoscope</span>
+                        </div>
+                        <div>
+                            <p class="text-slate-900 text-sm font-bold">Hausärztliche Betreuung</p>
+                            <p class="text-slate-500 text-xs">Umfassende medizinische Versorgung</p>
+                        </div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="flex items-center gap-4 p-4 rounded-xl border border-slate-100 bg-slate-50">
+                        <div
+                            class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                            <span class="material-symbols-outlined text-2xl">schedule</span>
+                        </div>
+                        <div>
+                            <p class="text-slate-900 text-sm font-bold">Flexible Ordinationszeiten</p>
+                            <p class="text-slate-500 text-xs">Vormittag & Nachmittag verfügbar</p>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="flex items-center gap-4 p-4 rounded-xl border border-slate-100 bg-slate-50">
+                        <div
+                            class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                            <span class="material-symbols-outlined text-2xl">groups</span>
+                        </div>
+                        <div>
+                            <p class="text-slate-900 text-sm font-bold">Zwei erfahrene Ärzte</p>
+                            <p class="text-slate-500 text-xs">Dr. Lobmaier & Dr. Breit</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ORDINATIONSZEITEN SECTION -->
+            <section id="ordination-times" class="py-16 px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="mb-10 text-center">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-3">
+                            <span class="w-2 h-2 rounded-full bg-primary"></span>
+                            <span class="text-xs font-bold text-primary uppercase tracking-wider">Öffnungszeiten</span>
+                        </div>
+                        <h2 class="text-3xl font-bold leading-tight tracking-tight text-[#0d141b]">Ordinationszeiten
+                        </h2>
+                        <p class="mt-2 text-[#4c739a] text-base leading-relaxed">
+                            Wir sind zu folgenden Zeiten für Sie da
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden">
+                        <div class="divide-y divide-slate-100">
+                            <!-- Montag -->
+                            <div
+                                class="flex flex-col md:flex-row md:items-center justify-between p-5 hover:bg-slate-50 transition-colors">
+                                <div class="flex items-center gap-3 mb-2 md:mb-0">
+                                    <span class="material-symbols-outlined text-primary">today</span>
+                                    <span class="font-bold text-slate-900">Montag</span>
+                                </div>
+                                <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                                    <span class="text-slate-600 font-medium">08:00 – 12:00</span>
+                                    <span
+                                        class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold">
+                                        Dr. Lobmaier
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Dienstag -->
+                            <div
+                                class="flex flex-col md:flex-row md:items-center justify-between p-5 hover:bg-slate-50 transition-colors">
+                                <div class="flex items-center gap-3 mb-2 md:mb-0">
+                                    <span class="material-symbols-outlined text-primary">today</span>
+                                    <span class="font-bold text-slate-900">Dienstag</span>
+                                </div>
+                                <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                                    <span class="text-slate-600 font-medium">13:00 – 17:00</span>
+                                    <span
+                                        class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold">
+                                        Dr. Lobmaier
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Mittwoch -->
+                            <div
+                                class="flex flex-col md:flex-row md:items-center justify-between p-5 hover:bg-slate-50 transition-colors">
+                                <div class="flex items-center gap-3 mb-2 md:mb-0">
+                                    <span class="material-symbols-outlined text-primary">today</span>
+                                    <span class="font-bold text-slate-900">Mittwoch</span>
+                                </div>
+                                <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                                    <span class="text-slate-600 font-medium">08:00 – 12:00</span>
+                                    <span
+                                        class="inline-flex items-center px-3 py-1 rounded-full bg-accent-orange/20 text-amber-700 text-sm font-semibold">
+                                        abwechselnd Dr. Lobmaier / Dr. Breit
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Donnerstag -->
+                            <div
+                                class="flex flex-col md:flex-row md:items-center justify-between p-5 hover:bg-slate-50 transition-colors">
+                                <div class="flex items-center gap-3 mb-2 md:mb-0">
+                                    <span class="material-symbols-outlined text-primary">today</span>
+                                    <span class="font-bold text-slate-900">Donnerstag</span>
+                                </div>
+                                <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                                    <span class="text-slate-600 font-medium">13:00 – 17:00</span>
+                                    <span
+                                        class="inline-flex items-center px-3 py-1 rounded-full bg-teal-100 text-teal-700 text-sm font-semibold">
+                                        Dr. Breit
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Freitag -->
+                            <div
+                                class="flex flex-col md:flex-row md:items-center justify-between p-5 hover:bg-slate-50 transition-colors">
+                                <div class="flex items-center gap-3 mb-2 md:mb-0">
+                                    <span class="material-symbols-outlined text-primary">today</span>
+                                    <span class="font-bold text-slate-900">Freitag</span>
+                                </div>
+                                <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+                                    <span class="text-slate-600 font-medium">08:00 – 12:00</span>
+                                    <span
+                                        class="inline-flex items-center px-3 py-1 rounded-full bg-teal-100 text-teal-700 text-sm font-semibold">
+                                        Dr. Breit
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="mt-6 text-center text-slate-500 text-sm">
+                        <span class="material-symbols-outlined text-sm align-middle mr-1">info</span>
+                        Bitte vereinbaren Sie Ihren Termin telefonisch, um Wartezeiten zu vermeiden.
+                    </p>
+                </div>
+            </section>
+
+            <!-- WICHTIGE TELEFONNUMMERN -->
+            <section id="emergency" class="bg-slate-900 py-16 px-4">
+                <div class="max-w-7xl mx-auto">
+                    <div class="mb-10 text-center">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/20 border border-red-500/30 mb-3">
+                            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                            <span class="text-xs font-bold text-red-400 uppercase tracking-wider">Notfall</span>
+                        </div>
+                        <h2 class="text-3xl font-bold leading-tight tracking-tight text-white">Wichtige Telefonnummern
+                        </h2>
+                        <p class="mt-2 text-slate-400 text-base leading-relaxed">
+                            Im Notfall erreichen Sie diese Dienste rund um die Uhr
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Hausärztlicher Notdienst -->
+                        <div
+                            class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center hover:bg-white/15 transition-all group">
+                            <div
+                                class="flex size-16 items-center justify-center rounded-full bg-red-500/20 text-red-400 mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-4xl">medical_services</span>
+                            </div>
+                            <h3 class="text-white text-lg font-bold mb-2">Hausärztlicher Notdienst</h3>
+                            <a href="tel:141"
+                                class="text-4xl font-black text-red-400 hover:text-red-300 transition-colors">141</a>
+                        </div>
+
+                        <!-- Rettung -->
+                        <div
+                            class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center hover:bg-white/15 transition-all group">
+                            <div
+                                class="flex size-16 items-center justify-center rounded-full bg-red-500/20 text-red-400 mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-4xl">emergency</span>
+                            </div>
+                            <h3 class="text-white text-lg font-bold mb-2">Rettung</h3>
+                            <a href="tel:144"
+                                class="text-4xl font-black text-red-400 hover:text-red-300 transition-colors">144</a>
+                        </div>
+
+                        <!-- Telefonische Gesundheitsberatung -->
+                        <div
+                            class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center hover:bg-white/15 transition-all group">
+                            <div
+                                class="flex size-16 items-center justify-center rounded-full bg-primary/30 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-4xl">support_agent</span>
+                            </div>
+                            <h3 class="text-white text-lg font-bold mb-2">Telefonische Gesundheitsberatung</h3>
+                            <a href="tel:1450"
+                                class="text-4xl font-black text-primary hover:text-teal-300 transition-colors">1450</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT SECTION -->
+            <section id="about" class="bg-background-light py-16 px-4">
+                <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
+
+                    <div class="w-full lg:w-1/2">
+                        <!-- Praxisbild - Platzhalter -->
+                        <div
+                            class="overflow-hidden rounded-2xl shadow-xl rotate-1 hover:rotate-0 transition-transform duration-500">
+                            <img src="images/praxis-innen.jpg"
+                                onerror="this.src='https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=2691&auto=format&fit=crop'"
+                                alt="Ordination Innenansicht" class="w-full h-auto object-cover min-h-[400px]">
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-1/2">
+                        <h2 class="text-primary tracking-tight text-3xl lg:text-4xl font-extrabold leading-tight pb-6">
+                            Ihre Hausärzte in Neukirchen
+                        </h2>
+                        <p class="text-slate-700 text-lg font-normal leading-relaxed pb-8">
+                            Als Hausarztpraxis in Neukirchen sind wir Ihre erste Anlaufstelle für alle
+                            gesundheitlichen Anliegen. Dr. Lobmaier und Dr. Breit stehen Ihnen mit Erfahrung,
+                            Kompetenz und persönlicher Betreuung zur Seite.
+                        </p>
+
+                        <div class="bg-primary/5 rounded-xl p-6 border-l-4 border-primary">
+                            <h3 class="text-primary font-bold text-lg mb-2 flex items-center gap-2">
+                                <span class="material-symbols-outlined">info</span>
+                                Für unsere Patientinnen und Patienten
+                            </h3>
+                            <p class="text-slate-700 text-sm leading-relaxed">
+                                Diese Website dient der Information unserer Patientinnen und Patienten.
+                                Für Terminvereinbarungen und medizinische Auskünfte wenden Sie sich bitte
+                                direkt an unsere Ordination.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT SECTION -->
+            <section id="contact" class="bg-white py-16 px-4">
+                <div class="max-w-7xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <!-- Left Column: Info -->
+                        <div class="space-y-8">
+                            <div>
+                                <h2 class="text-3xl font-bold leading-tight tracking-tight text-primary mb-2">
+                                    Kontaktieren Sie uns</h2>
+                                <p class="text-slate-600">Wir freuen uns auf Ihren Anruf oder Ihre Nachricht.</p>
+                            </div>
+
+                            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 shadow-sm">
+                                <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">location_on</span>
+                                    Ordination Neukirchen
+                                </h3>
+                                <p class="text-slate-600 mb-4 ml-8">
+                                    <!-- Adresse hier einfügen -->
+                                    Neukirchen, Oberösterreich
+                                </p>
+                                <div class="space-y-3 pt-4 border-t border-slate-200">
+                                    <a class="flex items-center gap-3 text-primary font-semibold hover:underline"
+                                        href="tel:+43000000000">
+                                        <span class="material-symbols-outlined">call</span>
+                                        Telefonnummer einfügen
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Praxisfoto -->
+                            <div class="w-full h-64 rounded-xl overflow-hidden border border-slate-100 bg-slate-200">
+                                <img class="w-full h-full object-cover" src="images/praxis-aussen.jpg"
+                                    onerror="this.src='https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2653&auto=format&fit=crop'"
+                                    alt="Ordination Außenansicht">
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Form -->
+                        <div class="bg-slate-50 rounded-2xl shadow-lg p-6 lg:p-8 border border-slate-100">
+                            <h3 class="text-xl font-bold mb-6 text-slate-900">Nachricht senden</h3>
+                            <form class="space-y-6" id="contact-form">
+                                <div class="flex flex-col gap-1">
+                                    <label class="text-base font-semibold text-[#0d141b]">Name</label>
+                                    <input required name="name"
+                                        class="w-full rounded-lg border border-slate-200 bg-white h-14 px-4 text-base focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
+                                        placeholder="Ihr vollständiger Name" type="text" />
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <label class="text-base font-semibold text-[#0d141b]">E-Mail</label>
+                                    <input required name="email"
+                                        class="w-full rounded-lg border border-slate-200 bg-white h-14 px-4 text-base focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
+                                        placeholder="ihre.email@beispiel.at" type="email" />
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <label class="text-base font-semibold text-[#0d141b]">Telefon</label>
+                                    <input name="phone"
+                                        class="w-full rounded-lg border border-slate-200 bg-white h-14 px-4 text-base focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
+                                        placeholder="+43 000 0000000" type="tel" />
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <label class="text-base font-semibold text-[#0d141b]">Ihre Nachricht</label>
+                                    <textarea required name="message"
+                                        class="w-full rounded-lg border border-slate-200 bg-white min-h-[144px] p-4 text-base focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all resize-none"
+                                        placeholder="Wie können wir Ihnen helfen?"></textarea>
+                                </div>
+                                <button type="submit"
+                                    class="w-full bg-primary hover:bg-teal-700 text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/20 transition-all uppercase tracking-wide transform active:scale-[0.98]">
+                                    Nachricht senden
+                                </button>
+                                <p class="text-xs text-center text-slate-400">Durch das Absenden stimmen Sie unserer
+                                    Datenschutzerklärung zu.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bg-slate-900 text-white py-12 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                    <!-- Column 1: Brand -->
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2 text-white">
+                            <span class="material-symbols-outlined text-3xl">local_hospital</span>
+                            <span class="font-extrabold text-xl">Ordination Neukirchen</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Ordination Dr. Lobmaier & Dr. Breit – Ihre Hausärzte in Neukirchen, Oberösterreich.
+                        </p>
+                    </div>
+
+                    <!-- Column 2: Contact -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 border-b border-slate-700 pb-2 inline-block">Kontakt</h4>
+                        <ul class="space-y-3 text-slate-400">
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-xs">call</span>
+                                Telefonnummer einfügen
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-xs">pin_drop</span>
+                                Neukirchen, Oberösterreich
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Links -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 border-b border-slate-700 pb-2 inline-block">Rechtliches</h4>
+                        <ul class="space-y-3 text-slate-400">
+                            <li><a class="hover:text-primary transition-colors" href="#">Impressum</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Datenschutz</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Copyright notice -->
+                <div
+                    class="pt-8 border-t border-slate-800 text-center text-slate-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p>© 2026 Ordination Dr. Lobmaier & Dr. Breit. Alle Rechte vorbehalten.</p>
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                        <span>Hausarztpraxis Neukirchen</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Mobile Bottom Nav (Sticky) -->
+        <nav
+            class="lg:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-slate-200 h-16 flex items-center justify-around px-6 z-40">
+            <a class="flex flex-col items-center gap-1 text-primary" href="#hero">
+                <span class="material-symbols-outlined fill-1">home</span>
+                <span class="text-[10px] font-bold">Start</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-slate-400" href="#ordination-times">
+                <span class="material-symbols-outlined">schedule</span>
+                <span class="text-[10px] font-medium">Zeiten</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-slate-400" href="#emergency">
+                <span class="material-symbols-outlined">emergency</span>
+                <span class="text-[10px] font-medium">Notfall</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-slate-400" href="#contact">
+                <span class="material-symbols-outlined">mail</span>
+                <span class="text-[10px] font-medium">Kontakt</span>
+            </a>
+        </nav>
+
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+/* Global Styles */
+body {
+    font-family: 'Public Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Primary Color Variable - Petrol */
+:root {
+    --primary-color: #006d77;
+}
+
+/* Material Symbols Adjustments */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-outlined.fill-1 {
+    font-variation-settings: 'FILL' 1;
+}
+
+/* Custom Scrollbar for horizontal scrolling */
+.snap-x {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.snap-x::-webkit-scrollbar {
+    display: none;
+}
+
+/* Smooth transitions for interactive elements */
+a,
+button {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Notice box animation */
+@keyframes pulse-notice {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.notice--warning {
+    animation: pulse-notice 3s ease-in-out infinite;
+}
