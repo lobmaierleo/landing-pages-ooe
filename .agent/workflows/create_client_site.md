@@ -18,7 +18,7 @@ Falls der User unsicher beim Design ist oder spezielle Wünsche hat:
 2. Nutze dies als Referenz für die Anpassungen in Schritt 5.
 
 # Schritt 3: Projekt-Ordner erstellen
-1. Kopiere `templates/handwerker-template` nach `clients/[slug]`.
+1. Kopiere wenn es ein passendes Template gibt dieses nach nach `clients/[slug]`.
    - Befehl: `cp -r templates/handwerker-template clients/[slug]`
 2. Prüfe, ob der Ordner existiert.
 
@@ -31,11 +31,10 @@ Falls der User unsicher beim Design ist oder spezielle Wünsche hat:
 1.  **Index.html**:
     - Ersetze den `<title>` mit dem Kunden-Namen.
     - Passe den Hero-Text (h1, p) an.
-    - Tausche Platzhalter-Bilder aus (nutze Unsplash Keywords passend zum Handwerk).
+    - Tausche Platzhalter-Bilder aus (nutze Unsplash Keywords und gegebene Bilder vom Kundne  passend zum Handwerk).
     - Update die Meta-Description.
 2.  **Style.css**:
     - Passe `--primary-color` an die gewünschte Hauptfarbe an.
-    - Passe `--trust-bar-bg` leicht abgedunkelt an.
 
 # Schritt 6: Datenbank / Email Routing (Supabase MCP)
 Benutze **zwingend** das Tool `mcp_supabase-mcp-server_execute_sql` um den Kunden anzulegen.
