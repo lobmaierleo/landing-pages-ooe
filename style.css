@@ -274,8 +274,13 @@ img {
 
 .hero h1 {
     font-size: 4.5rem;
+    font-weight: 400;
     margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
+}
+
+.hero h1 .text-gradient {
+    font-weight: 500;
 }
 
 .hero p {
@@ -823,6 +828,18 @@ img {
         align-items: flex-start;
         min-height: auto;
         padding-bottom: 4rem;
+    }
+
+    .hero-pricing-card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .hero-pricing-main {
+        font-size: 1.15rem;
+    }
+
+    .hero-cta {
+        padding: 1rem 1.75rem;
     }
 }
 
@@ -1528,7 +1545,7 @@ img {
     }
 
     .pricing-premium-card {
-        padding: 2.5rem 2rem;
+        padding: 2rem 1.5rem;
     }
 }
 
@@ -1697,7 +1714,7 @@ img {
     }
 
     .bento-card {
-        padding: 2rem;
+        padding: 1.5rem;
     }
 }
 
