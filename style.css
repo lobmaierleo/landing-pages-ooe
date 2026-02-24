@@ -1792,98 +1792,8 @@ img {
 }
 
 /* =====================================================
-   NEW FEATURES - Cookie Banner, Back to Top, Animations
+   NEW FEATURES - Back to Top, Animations
    ===================================================== */
-
-/* Cookie Banner */
-.cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(14, 14, 18, 0.98);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-    padding: 1.25rem;
-    z-index: 9999;
-    transform: translateY(100%);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.cookie-banner.visible {
-    transform: translateY(0);
-}
-
-.cookie-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.cookie-icon {
-    font-size: 2rem;
-    color: var(--accent-orange);
-}
-
-.cookie-content p {
-    flex: 1;
-    min-width: 250px;
-    font-size: 0.9rem;
-    color: #94a3b8;
-    margin: 0;
-}
-
-.cookie-content p a {
-    color: var(--accent-blue);
-    text-decoration: underline;
-}
-
-.cookie-content p a:hover {
-    color: #60a5fa;
-}
-
-.cookie-buttons {
-    display: flex;
-    gap: 0.75rem;
-    flex-shrink: 0;
-}
-
-.btn-cookie-accept {
-    padding: 0.6rem 1.25rem;
-    background: var(--primary-gradient);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-cookie-accept:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(212, 160, 23, 0.4);
-}
-
-.btn-cookie-decline {
-    padding: 0.6rem 1.25rem;
-    background: transparent;
-    color: #94a3b8;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-cookie-decline:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.2);
-}
 
 /* Back to Top Button */
 .back-to-top {
@@ -2016,22 +1926,8 @@ img {
     z-index: -1;
 }
 
-/* Cookie Banner Mobile */
+/* Mobile adjustments */
 @media (max-width: 600px) {
-    .cookie-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .cookie-buttons {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .cookie-icon {
-        margin-bottom: 0.5rem;
-    }
-
     .back-to-top {
         bottom: 1.5rem;
         right: 1.5rem;

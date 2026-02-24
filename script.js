@@ -185,36 +185,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // NEW FEATURES
     // =====================================================
 
-    // 6. Cookie Banner
-    const cookieBanner = document.getElementById('cookie-banner');
-    const cookieAccept = document.getElementById('cookie-accept');
-    const cookieDecline = document.getElementById('cookie-decline');
-
-    // Check if user has already made a choice
-    if (!localStorage.getItem('cookie-consent')) {
-        // Show banner after a short delay for better UX
-        setTimeout(() => {
-            cookieBanner.classList.add('visible');
-        }, 1500);
-    }
-
-    if (cookieAccept) {
-        cookieAccept.addEventListener('click', () => {
-            localStorage.setItem('cookie-consent', 'accepted');
-            cookieBanner.classList.remove('visible');
-            // Enable analytics if needed
-            console.log('Cookies accepted');
-        });
-    }
-
-    if (cookieDecline) {
-        cookieDecline.addEventListener('click', () => {
-            localStorage.setItem('cookie-consent', 'essential');
-            cookieBanner.classList.remove('visible');
-            console.log('Only essential cookies');
-        });
-    }
-
     // 7. Back to Top Button
     const backToTopBtn = document.getElementById('back-to-top');
 

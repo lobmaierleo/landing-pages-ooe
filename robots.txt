@@ -1,0 +1,13 @@
+# Robots.txt für landingpagesooe.app
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://landingpagesooe.app/sitemap.xml
+
+# Verzeichnisse die nicht indexiert werden sollen
+Disallow: /api/
+Disallow: /node_modules/
+Disallow: /supabase/
+Disallow: /templates/
+Disallow: /shared/
