@@ -30,6 +30,21 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // --- Cursor Spotlight Effect ---
+    const cursorGlow = document.querySelector('.cursor-glow');
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (!isTouchDevice && cursorGlow) {
+        document.addEventListener('mousemove', (e) => {
+            requestAnimationFrame(() => {
+                document.documentElement.style.setProperty('--mouse-x', e.clientX + 'px');
+                document.documentElement.style.setProperty('--mouse-y', e.clientY + 'px');
+            });
+        });
+    } else if (cursorGlow) {
+        cursorGlow.style.display = 'none';
+    }
+
 
     // 2. Mobile Navigation Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');

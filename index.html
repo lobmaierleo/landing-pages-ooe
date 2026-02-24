@@ -76,20 +76,18 @@
 
 <body>
 
+    <!-- Visual Effects Overlays -->
+    <div class="grid-overlay"></div>
+    <div class="edge-glow"></div>
+    <div class="cursor-glow"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                Webseiten <span class="text-gradient">OÖ</span>
-            </a>
+        <div class="nav-container">
             <div class="nav-links">
                 <a href="#portfolio">Referenzen</a>
                 <a href="#preise">Preise</a>
                 <a href="#prozess">Ablauf</a>
-                <a href="#kontakt" class="btn-primary">
-                    Konzept anfordern
-                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                </a>
             </div>
             <!-- Mobile Menu Button -->
             <button class="mobile-menu-btn" aria-label="Menü öffnen" aria-expanded="false">
@@ -118,9 +116,15 @@
                     <span class="plus-sign">+</span> 60€ / Jahr <span class="text-sm">(Hosting)</span>
                 </div>
 
-                <div class="hero-pricing-preview">
-                    <span class="material-symbols-outlined text-green">check_circle</span>
-                    <span class="preview-text">Vorschau: 0€ (gratis)</span>
+                <div class="hero-badges">
+                    <div class="hero-badge badge-green">
+                        <span class="material-symbols-outlined">check_circle</span>
+                        <span>Vorschau 0€ gratis</span>
+                    </div>
+                    <div class="hero-badge badge-gold">
+                        <span class="material-symbols-outlined">edit_square</span>
+                        <span>Jederzeit anpassbar</span>
+                    </div>
                 </div>
 
                 <p class="hero-pricing-guarantee">
