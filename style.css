@@ -1585,6 +1585,15 @@ img {
     margin: 0 auto 3rem;
 }
 
+/* Services 3-Column Grid */
+.pricing-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto 3rem;
+}
+
 .pricing-premium-card {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -1616,6 +1625,39 @@ img {
     right: 0;
     height: 4px;
     background: var(--primary-gradient);
+}
+
+/* Pricing Icon Badge */
+.pricing-icon-badge {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(212, 160, 23, 0.15), rgba(240, 192, 64, 0.08));
+    border: 1px solid rgba(212, 160, 23, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    transition: var(--transition);
+}
+
+.pricing-icon-badge .material-symbols-outlined {
+    font-size: 1.75rem;
+    color: #F0C040;
+}
+
+.pricing-premium-card:hover .pricing-icon-badge {
+    background: linear-gradient(135deg, rgba(212, 160, 23, 0.25), rgba(240, 192, 64, 0.15));
+    border-color: rgba(212, 160, 23, 0.4);
+    transform: scale(1.05);
+}
+
+/* Pricing Description */
+.pricing-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
 }
 
 .pricing-header {
@@ -1709,14 +1751,64 @@ img {
     margin-top: 0.1rem;
 }
 
+/* Rundum-Sorglos Full-Width Card */
+.pricing-sorglos-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+}
+
+.pricing-sorglos-card {
+    text-align: center;
+}
+
+.pricing-sorglos-card .pricing-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-sorglos-content {
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-sorglos-content .pricing-features-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2.5rem;
+    max-width: 600px;
+}
+
+@media (max-width: 992px) {
+    .pricing-services-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .pricing-cards-row {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
+    .pricing-services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
     .pricing-premium-card {
         padding: 2rem 1.5rem;
+    }
+
+    .pricing-sorglos-content .pricing-features-list {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-amount {
+        font-size: 2.5rem;
     }
 }
 
