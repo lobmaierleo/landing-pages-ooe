@@ -43,10 +43,14 @@ export default async function handler(req) {
     try {
         const { name, email, message, phone, client } = await req.json();
 
-        // Validierung
-        if (!name || !email || !message) {
+        // Validierung und Trimmen (vermeidet reine Leerzeichen)
+        const trimmedName = name ? name.trim() : '';
+        const trimmedEmail = email ? email.trim() : '';
+        const trimmedMessage = message ? message.trim() : '';
+
+        if (!trimmedName || !trimmedEmail || !trimmedMessage) {
             return new Response(JSON.stringify({
-                error: 'Name, E-Mail und Nachricht sind erforderlich'
+                error: 'Name, E-Mail und Nachricht sind erforderlich und dürfen nicht leer sein'
             }), {
                 status: 400,
                 headers: { ...corsHeaders, 'Content-Type': 'application/json' }

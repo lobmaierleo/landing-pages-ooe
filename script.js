@@ -111,12 +111,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Retrieve form data
             const formData = new FormData(contactForm);
+            
+            const nameVal = formData.get('name') ? formData.get('name').trim() : '';
+            const emailVal = formData.get('email') ? formData.get('email').trim() : '';
+            const messageVal = formData.get('message') ? formData.get('message').trim() : '';
+
+            // Frontend Validierung: Keine reinen Leerzeichen in Pflichtfeldern
+            if (!nameVal || !emailVal || !messageVal) {
+                showNotification('Bitte füllen Sie alle Pflichtfelder gültig aus (keine reinen Leerzeichen).', 'error');
+                return;
+            }
+
             const data = {
                 client: 'landing-pages-ooe',
-                name: formData.get('name'),
-                email: formData.get('email'),
+                name: nameVal,
+                email: emailVal,
                 phone: formData.get('phone') || null,
-                message: formData.get('message')
+                message: messageVal
             };
 
             // UI Feedback: Loading

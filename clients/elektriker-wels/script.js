@@ -33,12 +33,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Get form data
             const formData = new FormData(form);
+            
+            const nameVal = formData.get('name') ? formData.get('name').trim() : '';
+            const emailVal = formData.get('email') ? formData.get('email').trim() : '';
+            const messageVal = formData.get('message') ? formData.get('message').trim() : '';
+
+            // Frontend Validierung: Keine reinen Leerzeichen in Pflichtfeldern
+            if (!nameVal || !emailVal || !messageVal) {
+                alert('Bitte füllen Sie alle Pflichtfelder gültig aus (keine reinen Leerzeichen).');
+                return;
+            }
+
             const data = {
                 client: 'elektriker-wels',
-                name: formData.get('name'),
-                email: formData.get('email'),
+                name: nameVal,
+                email: emailVal,
                 phone: formData.get('phone'),
-                message: formData.get('message')
+                message: messageVal
             };
 
             // Loading state

@@ -44,6 +44,24 @@ export default async function handler(req) {
 
         const { from, to, subject, html, text, attachments } = payload;
 
+        // --- SPAM PROTECTION: Leere E-Mails ignorieren ---
+        const hasTextContent = text && text.trim().length > 0;
+        const hasHtmlContent = html && html.trim().length > 0;
+        const hasAttachments = attachments && attachments.length > 0;
+
+        if (!hasTextContent && !hasHtmlContent && !hasAttachments) {
+            console.log('🛑 E-Mail verworfen (Kein Inhalt):', subject);
+            // Wir geben 200 OK zurück, damit Resend es nicht erneut versucht (Retry)
+            return new Response(JSON.stringify({
+                success: true,
+                message: 'E-Mail ohne Inhalt verworfen'
+            }), {
+                status: 200,
+                headers: { 'Content-Type': 'application/json' }
+            });
+        }
+        // -------------------------------------------------
+
         const resend = new Resend(RESEND_API_KEY);
 
         // E-Mail an private Adresse weiterleiten
