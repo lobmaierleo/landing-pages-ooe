@@ -1,2 +1,9 @@
 node_modules/
 package-lock.json
+.mcp.json
+.vercel
+.env*.local
+.DS_Store
+
+# Client-Repos (eigene Git-Repos + Vercel-Projekte)
+clients/tischler-wels/
