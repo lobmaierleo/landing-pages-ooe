@@ -358,7 +358,7 @@
                         <!-- Ärzte-Team Bild -->
                         <div
                             class="overflow-hidden rounded-2xl shadow-xl rotate-1 hover:rotate-0 transition-transform duration-500">
-                            <img src="images/praxis-innen.jpg"
+                            <img src="images/praxis-innen.jpg" loading="lazy"
                                 onerror="this.src='https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=2691&auto=format&fit=crop'"
                                 alt="Dr. Lobmaier und Dr. Breit" class="w-full h-auto object-cover min-h-[400px]">
                         </div>
@@ -421,7 +421,7 @@
 
                             <!-- Praxisfoto -->
                             <div class="w-full h-64 rounded-xl overflow-hidden border border-slate-100 bg-slate-200">
-                                <img class="w-full h-full object-cover" src="images/praxis-aussen.jpg"
+                                <img class="w-full h-full object-cover" loading="lazy" src="images/praxis-aussen.jpg"
                                     onerror="this.src='https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2653&auto=format&fit=crop'"
                                     alt="Ordination Außenansicht">
                             </div>
@@ -430,7 +430,7 @@
                         <!-- Right Column: Form -->
                         <div class="bg-slate-50 rounded-2xl shadow-lg p-6 lg:p-8 border border-slate-100">
                             <h3 class="text-xl font-bold mb-6 text-slate-900">Nachricht senden</h3>
-                            <form class="space-y-6" id="contact-form">
+                            <form class="space-y-6" id="contact-form" data-client="arzt-neukirchen">
                                 <div class="flex flex-col gap-1">
                                     <label class="text-base font-semibold text-[#0d141b]">Name</label>
                                     <input required name="name"
@@ -545,7 +545,8 @@
     </div>
 
     <!-- Script -->
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/shared/form.js"></script>
 </body>
 
 </html>

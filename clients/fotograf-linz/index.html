@@ -141,7 +141,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-0">
                     <!-- Item 1 -->
                     <div class="group relative aspect-[4/5] overflow-hidden cursor-pointer">
-                        <img src="images/fotograf_wedding.png"
+                        <img src="images/fotograf_wedding.png" loading="lazy"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             alt="Hochzeit">
                         <div
@@ -153,7 +153,7 @@
                     </div>
                     <!-- Item 2 -->
                     <div class="group relative aspect-[4/5] overflow-hidden cursor-pointer">
-                        <img src="images/fotograf_portrait.png"
+                        <img src="images/fotograf_portrait.png" loading="lazy"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             alt="Portrait">
                         <div
@@ -274,7 +274,7 @@
             <section id="about" class="py-24 px-6 bg-white overflow-hidden">
                 <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
                     <div class="w-full md:w-1/2">
-                        <img src="images/fotograf_about.png"
+                        <img src="images/fotograf_about.png" loading="lazy"
                             class="w-full h-auto object-cover shadow-2xl skew-y-2 md:skew-y-0" alt="Photographer">
                     </div>
                     <div class="w-full md:w-1/2">
@@ -395,17 +395,17 @@
                     </div>
 
                     <div class="w-full lg:w-1/2 bg-white/5 backdrop-blur-lg p-8 md:p-10 border border-white/10">
-                        <form class="space-y-6">
+                        <form class="space-y-6" data-client="fotograf-linz">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="flex flex-col gap-2">
                                     <label class="text-xs uppercase tracking-widest font-bold text-accent">Name</label>
-                                    <input type="text"
+                                    <input type="text" name="name"
                                         class="bg-transparent border-b border-white/30 text-white placeholder-white/30 focus:border-accent focus:ring-0 px-0 py-3 transition-colors"
                                         placeholder="Ihr Name" required />
                                 </div>
                                 <div class="flex flex-col gap-2">
                                     <label class="text-xs uppercase tracking-widest font-bold text-accent">Datum</label>
-                                    <input type="text"
+                                    <input type="text" name="phone"
                                         class="bg-transparent border-b border-white/30 text-white placeholder-white/30 focus:border-accent focus:ring-0 px-0 py-3 transition-colors"
                                         placeholder="Wunschdatum" />
                                 </div>
@@ -413,7 +413,7 @@
 
                             <div class="flex flex-col gap-2">
                                 <label class="text-xs uppercase tracking-widest font-bold text-accent">E-Mail</label>
-                                <input type="email"
+                                <input type="email" name="email"
                                     class="bg-transparent border-b border-white/30 text-white placeholder-white/30 focus:border-accent focus:ring-0 px-0 py-3 transition-colors"
                                     placeholder="ihre@email.com" required />
                             </div>
@@ -432,7 +432,7 @@
 
                             <div class="flex flex-col gap-2">
                                 <label class="text-xs uppercase tracking-widest font-bold text-accent">Nachricht</label>
-                                <textarea rows="4"
+                                <textarea rows="4" name="message"
                                     class="bg-transparent border-b border-white/30 text-white placeholder-white/30 focus:border-accent focus:ring-0 px-0 py-3 transition-colors resize-none"
                                     placeholder="Erzählen Sie mir von Ihren Plänen..." required></textarea>
                             </div>
@@ -474,7 +474,8 @@
     </div>
 
     <!-- Script -->
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/shared/form.js"></script>
 </body>
 
 </html>
