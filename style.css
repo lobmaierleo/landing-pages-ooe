@@ -1720,6 +1720,15 @@ img {
     font-weight: 400;
 }
 
+.pricing-period-alt {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--accent-gold);
+    font-weight: 500;
+    margin-top: 0.4rem;
+    opacity: 0.85;
+}
+
 .pricing-features-list {
     text-align: left;
     list-style: none;
