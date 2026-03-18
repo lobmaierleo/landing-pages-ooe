@@ -1,5 +1,5 @@
 ---
-name: cold-outreach
+name: customer-outreach
 description: Personalisierte Kaltakquise-Emails an potenzielle Kunden senden, Prospects recherchieren und Follow-ups verwalten
 user_invocable: true
 ---
