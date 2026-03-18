@@ -35,14 +35,14 @@ export default async function handler(req) {
     try {
         const payload = await req.json();
 
-        console.log('📧 Neue E-Mail empfangen:', {
-            from: payload.from,
-            to: payload.to,
-            subject: payload.subject,
+        console.log('📧 Webhook empfangen:', {
+            type: payload.type,
             timestamp: new Date().toISOString()
         });
 
-        const { from, to, subject, html, text, attachments } = payload;
+        // Resend wraps inbound email data in payload.data
+        const emailData = payload.data || payload;
+        const { from, to, subject, html, text, attachments } = emailData;
 
         // --- SPAM PROTECTION: Leere E-Mails ignorieren ---
         const hasTextContent = text && text.trim().length > 0;
