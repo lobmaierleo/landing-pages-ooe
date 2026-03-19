@@ -345,7 +345,7 @@ img {
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 20px;
     padding: 2rem;
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto 2.5rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     position: relative;
@@ -1657,7 +1657,8 @@ img {
     color: var(--text-muted);
     font-size: 0.95rem;
     line-height: 1.6;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+    min-height: 5.2rem;
 }
 
 .pricing-header {
@@ -1665,6 +1666,8 @@ img {
     margin-bottom: 2rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
 .pricing-label {
@@ -1690,8 +1693,11 @@ img {
 .pricing-title {
     font-size: 1.8rem;
     font-weight: 600;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: var(--text-light);
+    min-height: 4.5rem;
+    display: flex;
+    align-items: flex-end;
 }
 
 .pricing-price-wrap {
