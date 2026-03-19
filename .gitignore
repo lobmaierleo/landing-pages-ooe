@@ -7,3 +7,8 @@ package-lock.json
 
 # Client-Repos (eigene Git-Repos + Vercel-Projekte)
 clients/tischler-wels/
+.DS_Store
+
+# Workspaces
+prospect-hunter-workspace/
+.claude/

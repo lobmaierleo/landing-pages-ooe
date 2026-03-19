@@ -1698,6 +1698,7 @@ img {
     display: flex;
     align-items: baseline;
     gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .pricing-amount {
@@ -1705,6 +1706,7 @@ img {
     font-size: 3.5rem;
     font-weight: 700;
     color: var(--text-light);
+    white-space: nowrap;
 }
 
 .highlight .pricing-amount {

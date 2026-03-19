@@ -85,7 +85,7 @@ serve(async (req) => {
                 'Authorization': `Bearer ${RESEND_API_KEY}`,
             },
             body: JSON.stringify({
-                from: 'Landing Pages OÖ <kontakt@landingpagesooe.app>',
+                from: 'Landing Pages OOE <onboarding@resend.dev>',
                 to: [recipientEmail],
                 subject: `Neue Anfrage für ${clientName}`,
                 html: `
