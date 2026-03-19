@@ -39,11 +39,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=8">
 
     <!-- Plausible Analytics (DSGVO-konform, keine Cookies) -->
     <script defer data-domain="landingpagesooe.app" src="https://plausible.io/js/script.js"></script>
@@ -183,48 +183,54 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
-        <div class="container hero-content fade-in-up">
-            <div class="hero-eyecatcher">
-                ✨ Für Selbstständige & Unternehmer, die mehr Kunden wollen
-            </div>
+    <header class="hero" id="hero-scroll-section">
+        <div class="hero-sticky-container">
+            <!-- Subtle top glow -->
+            <div class="hero-glow"></div>
 
-            <h1>
-                Ihre professionelle Webseite<br>
-                <span class="text-gradient">innerhalb von 3 Tagen.</span>
-            </h1>
+            <div class="container-scroll-perspective" id="container-scroll-perspective">
+                <div class="container hero-content" id="container-scroll-header">
+                    <!-- Badge -->
+                    <div class="hero-badge">
+                        <span class="hero-badge-dot"></span>
+                        Für Selbstständige & Unternehmer in OÖ
+                    </div>
 
-            <div class="hero-pricing-card">
-                <div class="hero-pricing-main">
-                    Leistungen <span class="text-gradient font-bold">ab 200€</span>
-                    <span class="plus-sign">+</span> ab 15€ / Monat <span class="text-sm"
-                        style="white-space: nowrap;">(Rundum-Sorglos)</span>
+                    <!-- Headline -->
+                    <h1 class="hero-headline">
+                        Ihre professionelle Webseite<br>
+                        in nur <span class="hero-highlight">3 Tagen.</span>
+                    </h1>
+
+                    <!-- Pricing Card -->
+                    <div class="hero-pricing-card">
+                        <div class="hero-pricing-main">
+                            Leistungen <span class="text-gradient font-bold">ab 200€</span>
+                            <span class="plus-sign">+</span> ab 15€ / Monat <span class="text-sm"
+                                style="white-space: nowrap;">(Rundum-Sorglos)</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <a href="#kontakt" class="hero-cta-link">
+                        Kostenlos anfragen
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
                 </div>
 
-                <div class="hero-badges">
-                    <div class="hero-badge badge-green">
-                        <span class="material-symbols-outlined">check_circle</span>
-                        <span>Vorschau 0€ gratis</span>
+                <!-- Browser Mockup Showcase -->
+                <div class="container hero-showcase-container">
+                    <div class="hero-showcase" id="container-scroll-card">
+                        <div class="hero-showcase-bar">
+                            <div class="hero-showcase-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="hero-showcase-url">tischlerei-holzmann.at</div>
+                        </div>
+                        <div class="hero-showcase-screen">
+                            <img src="assets/showcase-mockup.png" alt="Premium Webseite Beispiel – von Webseiten OÖ erstellt" loading="eager" width="1200" height="1200">
+                        </div>
                     </div>
-                    <div class="hero-badge badge-gold">
-                        <span class="material-symbols-outlined">edit_square</span>
-                        <span>Jederzeit anpassbar</span>
-                    </div>
-                </div>
-
-                <p class="hero-pricing-guarantee">
-                    Sie entscheiden nach der Vorschau – <span class="text-gradient">kein Risiko.</span>
-                </p>
-            </div>
-
-            <div class="hero-buttons">
-                <a href="#kontakt" class="btn-primary hero-cta">
-                    Heute anfragen
-                    <span class="material-symbols-outlined text-sm">rocket_launch</span>
-                </a>
-                <div class="hero-guarantee">
-                    <span class="material-symbols-outlined">shield_lock</span>
-                    100% kostenfrei & unverbindlich
                 </div>
             </div>
         </div>
@@ -317,73 +323,47 @@
     </section>
 
 
-    <!-- Portfolio Section -->
+    <!-- Referenzen Links Section -->
     <section id="portfolio" class="section">
         <div class="container">
-            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+            <div class="text-center max-w-3xl mx-auto mb-12 fade-in-up">
                 <h2 class="section-title">Unsere <span class="text-gradient">Referenzen</span></h2>
+                <p class="section-subtitle">Überzeugen Sie sich selbst von unserer Arbeit.</p>
             </div>
 
-            <div class="portfolio-grid fade-in-up">
-                <!-- Project 1: Tischler -->
-                <div class="portfolio-card-wrapper">
-                    <div class="browser-mockup">
-                        <div class="browser-header">
-                            <div class="browser-dots">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <div class="browser-url">tischlerei-holzmann.at</div>
-                        </div>
-                        <a href="https://tischler-wels.vercel.app" target="_blank" class="browser-content group">
-                            <div class="overlay">
-                                <span class="btn-primary">Demo öffnen <span
-                                        class="material-symbols-outlined text-sm ml-1">open_in_new</span></span>
-                            </div>
-                            <img src="assets/thumbnails/thumb_tischler.png" class="aspect-video object-cover"
-                                alt="Tischlerei Webseite" loading="lazy">
-                        </a>
+            <div class="references-grid fade-in-up">
+                <a href="https://tischler-wels.vercel.app" target="_blank" rel="noopener" class="reference-link">
+                    <div class="reference-icon">
+                        <span class="material-symbols-outlined">carpenter</span>
                     </div>
-                </div>
+                    <div class="reference-info">
+                        <h3>Tischlerei Holzmann</h3>
+                        <span class="reference-url">tischlerei-holzmann.at</span>
+                    </div>
+                    <span class="material-symbols-outlined reference-arrow">arrow_forward</span>
+                </a>
 
-                <!-- Project 2: Fotograf -->
-                <div class="portfolio-card-wrapper">
-                    <div class="browser-mockup">
-                        <div class="browser-header">
-                            <div class="browser-dots">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <div class="browser-url">lichtblick-fotografie.at</div>
-                        </div>
-                        <a href="clients/fotograf-linz/index.html" target="_blank" class="browser-content group">
-                            <div class="overlay">
-                                <span class="btn-primary">Demo öffnen <span
-                                        class="material-symbols-outlined text-sm ml-1">open_in_new</span></span>
-                            </div>
-                            <img src="assets/thumbnails/thumb_fotograf.png" class="aspect-video object-cover"
-                                alt="Fotograf Portfolio" loading="lazy">
-                        </a>
+                <a href="clients/fotograf-linz/index.html" target="_blank" rel="noopener" class="reference-link">
+                    <div class="reference-icon">
+                        <span class="material-symbols-outlined">photo_camera</span>
                     </div>
-                </div>
+                    <div class="reference-info">
+                        <h3>Lichtblick Fotografie</h3>
+                        <span class="reference-url">lichtblick-fotografie.at</span>
+                    </div>
+                    <span class="material-symbols-outlined reference-arrow">arrow_forward</span>
+                </a>
 
-                <!-- Project 3: Elektriker -->
-                <div class="portfolio-card-wrapper">
-                    <div class="browser-mockup">
-                        <div class="browser-header">
-                            <div class="browser-dots">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <div class="browser-url">elektro-mayr.at</div>
-                        </div>
-                        <a href="clients/elektriker-wels/index.html" target="_blank" class="browser-content group">
-                            <div class="overlay">
-                                <span class="btn-primary">Demo öffnen <span
-                                        class="material-symbols-outlined text-sm ml-1">open_in_new</span></span>
-                            </div>
-                            <img src="assets/thumbnails/thumb_elektriker.png" class="aspect-video object-cover"
-                                alt="Elektriker Webseite" loading="lazy">
-                        </a>
+                <a href="clients/elektriker-wels/index.html" target="_blank" rel="noopener" class="reference-link">
+                    <div class="reference-icon">
+                        <span class="material-symbols-outlined">electrical_services</span>
                     </div>
-                </div>
+                    <div class="reference-info">
+                        <h3>Elektro Mayr</h3>
+                        <span class="reference-url">elektro-mayr.at</span>
+                    </div>
+                    <span class="material-symbols-outlined reference-arrow">arrow_forward</span>
+                </a>
             </div>
         </div>
     </section>
@@ -694,7 +674,7 @@
     </button>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=8"></script></script>
 </body>
 
 </html>

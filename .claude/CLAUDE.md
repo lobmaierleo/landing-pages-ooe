@@ -37,14 +37,11 @@ Plain HTML/CSS/JS project. No bundler, no framework. Open HTML files directly in
 - Analytics: Plausible (cookie-free, DSGVO-konform)
 - Spam protection: frontend input trimming + validation before Supabase insert
 
-## Notion Integration (wichtig!)
-
-- Orientiere dich beim Erstellen einer Landing Page am vollständigen Inhalt und Workflow der Notion-Seite **"Landing Pages OE"**
-- Nach Abschluss einer Aufgabe: aktualisiere den Status in **"Landing Pages OOE - Issue Tracker"** (Notion)
-
 ## Neuen Kunden aufnehmen
 
-Vollständiger Workflow: **`.claude/workflows/neuer-kunde.md`** — lies diese Datei wenn ein neuer Kunde erstellt oder der Workflow gebraucht wird.
+> **NICHT proaktiv laden.** Erst lesen wenn der User explizit sagt: „neuen Kunden aufnehmen" oder „Kunden-Workflow".
+
+Vollständiger Workflow: `.claude/workflows/neuer-kunde.md`
 
 Kurzfassung: Jeder Kunde bekommt ein eigenes Git-Repo + Vercel-Projekt unter `clients/<slug>/`. Details, Checkliste und Wartungshinweise stehen im Workflow-Dokument.
 
