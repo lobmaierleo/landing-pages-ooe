@@ -11,4 +11,4 @@ clients/tischler-wels/
 
 # Workspaces
 prospect-hunter-workspace/
-.claude/
+.claude/settings*.json
