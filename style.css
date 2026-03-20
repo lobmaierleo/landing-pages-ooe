@@ -250,22 +250,19 @@ img {
 }
 
 #hero-scroll-section {
-    height: 250vh; /* 100vh for content + 150vh for scrolling + iPad space */
     padding: 0;
     margin: 0;
 }
 
 .hero-sticky-container {
-    position: sticky;
-    top: 0;
-    height: 100svh;
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     overflow: visible;
-    padding-top: 15svh;
+    padding-top: 10svh;
 }
 
 /* --- Subtle top radial glow --- */
@@ -292,8 +289,6 @@ img {
     flex-direction: column;
     align-items: center;
     opacity: 0;
-    will-change: transform, opacity;
-    /* initial transform handled by JS */
     animation: hero-entrance-fade 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
 }
 
@@ -346,6 +341,17 @@ img {
     font-weight: 400;
 }
 
+/* --- Pricing Card in Hero --- */
+.hero-pricing-card {
+    margin-bottom: 1.5rem;
+}
+
+.hero-pricing-main {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
 /* --- CTA Link (understated, like Linear) --- */
 .hero-cta-link {
     display: inline-flex;
@@ -355,6 +361,7 @@ img {
     font-weight: 600;
     color: var(--text-main);
     text-decoration: none;
+    margin-top: 0.5rem;
     padding: 0.75rem 1.6rem;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.06);
@@ -380,38 +387,29 @@ img {
 /* --- Container Scroll Animation Areas --- */
 .container-scroll-perspective {
     width: 100%;
-    perspective: 1200px;
-    perspective-origin: 50% 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 1rem;
 }
 
-@media (min-width: 768px) {
-    .container-scroll-perspective {
-        padding-top: 1rem;
-    }
-}
-
 /* --- Browser Mockup Showcase --- */
 .hero-showcase-container {
     position: relative;
     z-index: 2;
-    margin-top: 0; /* Reset */
-    padding-bottom: 0; /* Reset */
+    margin-top: 4rem;
+    padding-bottom: 0;
     opacity: 0;
-    /* initial transform handled by JS wrapper */
     animation: hero-entrance-fade 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
 }
 
 .hero-showcase {
     position: relative;
     overflow: hidden;
-    margin: 3rem auto 0;
-    max-width: 1200px;
+    margin: 0 auto;
+    max-width: 1024px;
     width: 100%;
-    height: 25rem;
+    height: 30rem;
     border: 4px solid #6C6C6C;
     padding: 0.5rem;
     background-color: #222222;
@@ -419,16 +417,12 @@ img {
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003;
-    transform-origin: 50% 100%;
-    transform-style: preserve-3d;
-    will-change: transform, box-shadow;
-    transition: box-shadow 0.1s ease-out;
 }
 
 @media (min-width: 768px) {
     .hero-showcase {
-        height: 35rem;
-        padding: 1.5rem;
+        height: 40rem;
+        padding: 1rem;
     }
 }
 
@@ -440,6 +434,7 @@ img {
     padding: 0.9rem 1.2rem;
     background: rgba(26, 26, 32, 0.95);
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 18px 18px 0 0;
 }
 
 .hero-showcase-dots {
@@ -1032,13 +1027,7 @@ img {
         padding-bottom: 3rem;
     }
 
-    .hero-showcase-screen {
-        max-height: 300px;
-    }
-
-    .hero-showcase {
-        border-radius: 12px;
-    }
+    /* Mobile: keine Clipping-Overrides — Card behält volle Höhe und 30px radius */
 }
 
 @keyframes slideDown {
