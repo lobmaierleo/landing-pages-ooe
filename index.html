@@ -110,6 +110,16 @@
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
+                        "name": "Von Grund auf",
+                        "description": "Komplette Webseite von Grund auf erstellt – Design, Struktur, Texte und Technik aus einer Hand"
+                    },
+                    "price": "1299",
+                    "priceCurrency": "EUR"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
                         "name": "Der Refresh",
                         "description": "Neue Webseite oder kompletter Refresh Ihrer bestehenden Seite"
                     },
@@ -219,7 +229,9 @@
                             <div class="hero-showcase-url">tischlerei-holzmann.at</div>
                         </div>
                         <div class="hero-showcase-screen">
-                            <img src="assets/showcase-mockup.png" alt="Premium Webseite Beispiel – von Webseiten OÖ erstellt" loading="eager" width="1200" height="1200">
+                            <img src="assets/showcase-mockup.png"
+                                alt="Premium Webseite Beispiel – von Webseiten OÖ erstellt" loading="eager" width="1200"
+                                height="1200">
                         </div>
                     </div>
                 </div>
@@ -378,6 +390,33 @@
 
             <!-- Service Cards -->
             <div class="pricing-services-grid fade-in-up">
+                <!-- Von Grund auf -->
+                <div class="pricing-premium-card">
+                    <div class="pricing-header">
+                        <div class="pricing-icon-badge">
+                            <span class="material-symbols-outlined">rocket_launch</span>
+                        </div>
+                        <h3 class="pricing-title">Von Grund auf</h3>
+                        <p class="pricing-desc">Komplette Webseite von Grund auf erstellt – Design, Struktur, Texte und
+                            Technik aus einer Hand.</p>
+                        <div class="pricing-price-wrap">
+                            <span class="pricing-original">1.799 €</span>
+                            <span class="pricing-amount">1.299 €</span>
+                            <span class="pricing-discount-badge">Gründungsrabatt</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features-list">
+                        <li><span class="material-symbols-outlined icon-check">check_circle</span>Individuelles Design &
+                            Branding</li>
+                        <li><span class="material-symbols-outlined icon-check">check_circle</span>Mehrere Unterseiten
+                            inkludiert</li>
+                        <li><span class="material-symbols-outlined icon-check">check_circle</span>SEO-Optimierung &
+                            Google-Eintrag</li>
+                        <li><span class="material-symbols-outlined icon-check">check_circle</span><strong>Ihr kompletter
+                                Webauftritt – schlüsselfertig.</strong></li>
+                    </ul>
+                </div>
+
                 <!-- Der Refresh -->
                 <div class="pricing-premium-card">
                     <div class="pricing-header">
@@ -404,8 +443,26 @@
                     </ul>
                 </div>
 
+            </div>
+
+            <!-- Add-ons Section -->
+            <div class="pricing-addons-header fade-in-up">
+                <div class="pricing-addons-divider"></div>
+                <h3 class="pricing-addons-title">
+                    <span class="material-symbols-outlined">extension</span>
+                    Erweiterungen
+                </h3>
+                <p class="pricing-addons-subtitle">Zusätzliche Features für Ihre Webseite – buchbar zu jedem
+                    Website-Paket.</p>
+            </div>
+
+            <div class="pricing-services-grid pricing-addons-grid fade-in-up">
                 <!-- KI-Chatbot -->
-                <div class="pricing-premium-card">
+                <div class="pricing-premium-card pricing-addon-card">
+                    <span class="pricing-addon-label">
+                        <span class="material-symbols-outlined">add_circle</span>
+                        Add-on
+                    </span>
                     <div class="pricing-header">
                         <div class="pricing-icon-badge">
                             <span class="material-symbols-outlined">smart_toy</span>
@@ -429,10 +486,18 @@
                         <li><span class="material-symbols-outlined icon-check">check_circle</span><strong>Entlastet Sie
                                 im Alltag.</strong></li>
                     </ul>
+                    <div class="pricing-addon-requires">
+                        <span class="material-symbols-outlined">info</span>
+                        Benötigt ein Website-Paket
+                    </div>
                 </div>
 
                 <!-- Blog Beitrag Feature -->
-                <div class="pricing-premium-card">
+                <div class="pricing-premium-card pricing-addon-card">
+                    <span class="pricing-addon-label">
+                        <span class="material-symbols-outlined">add_circle</span>
+                        Add-on
+                    </span>
                     <div class="pricing-header">
                         <div class="pricing-icon-badge">
                             <span class="material-symbols-outlined">article</span>
@@ -456,6 +521,10 @@
                                 Reichweite
                                 durch wertvollen Content.</strong></li>
                     </ul>
+                    <div class="pricing-addon-requires">
+                        <span class="material-symbols-outlined">info</span>
+                        Benötigt ein Website-Paket
+                    </div>
                 </div>
             </div>
 
@@ -545,7 +614,7 @@
                         </div>
                     </div>
                     <h3 class="team-card-name">Manuel <span class="text-gradient">Gross</span></h3>
-                    <span class="team-card-role">Geschäftspartner & Entwickler</span>
+                    <span class="team-card-role">Mitgründer & Entwickler</span>
                     <p class="team-card-desc">
                         IT-Student an der HTL Leonding mit Fokus auf KI und Full-Stack Development.
                         Innovative Lösungen und modernste Web-Technologien.
@@ -665,7 +734,8 @@
     </button>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="script.js?v=8"></script></script>
+    <script src="script.js?v=8"></script>
+    </script>
 </body>
 
 </html>
