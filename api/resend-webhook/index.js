@@ -3,7 +3,7 @@ import { Resend } from 'resend';
 /**
  * Resend Webhook Handler - E-Mail Empfang & Weiterleitung
  * 
- * Empfängt eingehende E-Mails an kontakt@landingpagesooe.app
+ * Empfängt eingehende E-Mails an landingpages.ooe@proton.me
  * und leitet sie automatisch an die konfigurierte private E-Mail weiter.
  * 
  * Environment Variables benötigt:
@@ -66,7 +66,7 @@ export default async function handler(req) {
 
         // E-Mail an private Adresse weiterleiten
         const emailPayload = {
-            from: 'Landing Pages OÖ <kontakt@landingpagesooe.app>',
+            from: 'Landing Pages OÖ <landingpages.ooe@proton.me>',
             to: FORWARD_EMAIL,
             subject: `[Forwarded] ${subject || '(Kein Betreff)'}`,
             html: `
@@ -77,7 +77,7 @@ export default async function handler(req) {
           
           <div style="background: #f8fafc; padding: 16px; border-left: 4px solid #3b82f6;">
             <p style="margin: 0 0 8px 0; color: #475569;"><strong>Von:</strong> ${from || 'Unbekannt'}</p>
-            <p style="margin: 0 0 8px 0; color: #475569;"><strong>An:</strong> ${to || 'kontakt@landingpagesooe.app'}</p>
+            <p style="margin: 0 0 8px 0; color: #475569;"><strong>An:</strong> ${to || 'landingpages.ooe@proton.me'}</p>
             <p style="margin: 0; color: #475569;"><strong>Betreff:</strong> ${subject || '(Kein Betreff)'}</p>
           </div>
           
